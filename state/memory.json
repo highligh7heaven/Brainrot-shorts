@@ -1,36 +1,5 @@
 {
-  "series": {
-    "id": "20261024_0725",
-    "part": 2,
-    "total": 3,
-    "title": "The Bulldozer Betrayal",
-    "characters": [
-      {
-        "id": "bob",
-        "name": "Broccoli Bob",
-        "look": "A big friendly broccoli man with a bushy green floret head, kind round eyes and a thick stalk body, wearing an orange hi-vis vest, yellow hard hat and muddy work boots.",
-        "voice": "deep_man"
-      },
-      {
-        "id": "carl",
-        "name": "Carrot Carl",
-        "look": "A tall skinny carrot man with a leafy green tuft sticking out of a white hard hat, narrow sly eyes and a wide grin, wearing a spotless blue work shirt with rolled sleeves.",
-        "voice": "man"
-      },
-      {
-        "id": "pineapple",
-        "name": "Mr Pineapple",
-        "look": "A stout old pineapple man with a spiky crown of leaves, bushy grey eyebrows and a golden spiky body, wearing a brown suit vest and a clipboard tucked under his arm.",
-        "voice": "old_man"
-      }
-    ],
-    "so_far": [
-      "Part 1: Carrot Carl secretly swaps Broccoli Bob's blueprints, making Bob sink the boss's trailer and get fired while Carl takes his bulldozer.",
-      "Part 2: Bob finds the fake blueprint covered in orange dust, Carl nearly crushes the evidence with the bulldozer, and Mr Pineapple catches them both just as Carl blames Bob."
-    ],
-    "cliffhanger": "Carl tries to frame Bob all over again, but the orange dust on the blueprint is about to tell Mr Pineapple the real story.",
-    "narrator": 5
-  },
+  "series": null,
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -39,9 +8,14 @@
     {
       "title": "The Fired Worker Found the Fake Blueprint (Part 2)",
       "premise": "The Bulldozer Betrayal (part 2): Bob finds the fake blueprint covered in orange dust, Carl nearly crushes the evidence with the bulldozer, and Mr Pineapple catches them both just as Carl blames Bob."
+    },
+    {
+      "title": "One Orange Smudge Exposed the Real Saboteur (Part 3)",
+      "premise": "The Bulldozer Betrayal (part 3): Mr Pineapple traces the carrot dust to Carl, who flees in the bulldozer and sinks it in the mud pit, while Bob rescues him, becomes foreman and gets his bulldozer back."
     }
   ],
   "done_slots": [
-    "2026-10-24 08:00"
+    "2026-10-24 08:00",
+    "2026-10-24 13:00"
   ]
 }
