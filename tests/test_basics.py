@@ -1,6 +1,6 @@
 import unittest
 
-from brainrot import captions, story
+from brainrot import captions, cast, story
 
 
 class StoryTests(unittest.TestCase):
@@ -28,6 +28,19 @@ class StoryTests(unittest.TestCase):
         raw = story.sample_story()
         raw["hashtags"] = ["funny"]
         self.assertEqual(story.check_story(raw, raw["brief"])["hashtags"], ["#funny", "#shorts", "#brainrot"])
+
+
+class VoiceTests(unittest.TestCase):
+    def test_openai_narrator_gives_openai_characters(self):
+        s = story.sample_story()
+        s["narrator"] = [i for i, n in enumerate(cast.NARRATORS) if n[0] == "openai"][0]
+        speakers = cast.speakers_for(s)
+        self.assertTrue(all(sp.engine == "openai" for sp in speakers.values()))
+
+    def test_edge_narrator_gives_edge_characters(self):
+        s = story.sample_story()
+        s["narrator"] = 0
+        self.assertTrue(all(sp.engine == "edge" for sp in cast.speakers_for(s).values()))
 
 
 class CaptionTests(unittest.TestCase):
