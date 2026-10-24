@@ -45,6 +45,16 @@ def send_files(paths, note):
     _call("sendMessage", data={"chat_id": chat, "text": note})
 
 
+def send_audio(named_paths, note):
+    """Sends audio clips, each labelled with its name, then a note."""
+    chat = os.environ["TELEGRAM_CHAT_ID"].strip()
+    for name, path in named_paths:
+        with open(path, "rb") as f:
+            _call("sendAudio", data={"chat_id": chat, "title": name, "caption": name},
+                  files={"audio": (path.name, f, "audio/mpeg")})
+    _call("sendMessage", data={"chat_id": chat, "text": note})
+
+
 def send_problem(message):
     """Lets you know when a run fails, so you're not left waiting."""
     if ready():
