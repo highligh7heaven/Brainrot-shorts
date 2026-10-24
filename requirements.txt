@@ -1,0 +1,6 @@
+# Python packages the robot installs on GitHub's computers
+anthropic>=2.0
+openai>=2.0
+edge-tts>=7.0
+pillow
+requests

@@ -7,12 +7,13 @@
 
 import argparse
 import json
+import os
 import subprocess
 import time
 import wave
 from datetime import datetime
 
-from . import captions, config, images, story, video, voice
+from . import captions, config, images, story, telegram, video, voice
 from .cast import narrator, speaker_for
 
 
@@ -112,10 +113,18 @@ def run(idea=None, sample=False, topic_finder=None):
 
 def main():
     parser = argparse.ArgumentParser(description="Make one brainrot Short.")
-    parser.add_argument("--idea", default="", help="your own idea in a few words")
+    parser.add_argument("--idea", default=os.environ.get("IDEA", ""), help="your own idea in a few words")
     parser.add_argument("--sample", action="store_true", help="use the built-in test story")
     args = parser.parse_args()
-    run(idea=args.idea.strip() or None, sample=args.sample)
+    try:
+        path, script = run(idea=args.idea.strip() or None, sample=args.sample)
+    except Exception as e:
+        if not args.sample:
+            telegram.send_problem(str(e))
+        raise
+    if telegram.ready() and not args.sample:
+        telegram.send(path, script)
+        print("Sent to Telegram.")
 
 
 if __name__ == "__main__":
