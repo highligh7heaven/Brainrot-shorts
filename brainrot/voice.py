@@ -4,7 +4,7 @@
 import asyncio
 import re
 import subprocess
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 
 from . import config
 
@@ -128,7 +128,50 @@ def speak_espeak(text, character, delivery, stem):
     return Clip(wav, duration, spread_words(text, duration))
 
 
+ACTING = {
+    "normal": "",
+    "shout": " Say this line loudly and angrily, almost shouting.",
+    "whisper": " Whisper this line, secretive and tense.",
+    "fast": " Say this line quickly and excitedly.",
+    "sad": " Say this line sadly, close to tears.",
+}
+
+
+def word_times(client, path):
+    """Asks OpenAI's speech-to-text when each word is said (about $0.006 a minute)."""
+    with open(path, "rb") as f:
+        result = client.audio.transcriptions.create(
+            model="whisper-1", file=f, response_format="verbose_json", timestamp_granularities=["word"])
+    return [(w.word, w.start, w.end) for w in (result.words or [])]
+
+
+def speak_openai(text, character, delivery, stem):
+    from openai import OpenAI
+
+    client = OpenAI()
+    mp3, wav = f"{stem}.mp3", f"{stem}.wav"
+    with client.audio.speech.with_streaming_response.create(
+            model="gpt-4o-mini-tts", voice=character.voice, input=text,
+            instructions=character.style + ACTING.get(delivery, ""),
+            speed=float(character.rate or 1.0), response_format="mp3") as response:
+        response.stream_to_file(mp3)
+    to_wav(mp3, wav)
+    duration = duration_of(wav)
+    try:
+        words = word_times(client, wav)
+    except Exception as e:
+        print(f"Word timing failed ({e}); spreading words evenly instead.")
+        words = []
+    return Clip(wav, duration, words or spread_words(text, duration))
+
+
 def speak(text, character, delivery, stem):
     if config.VOICE_ENGINE == "espeak":
         return speak_espeak(text, character, delivery, stem)
+    if character.engine == "openai":
+        try:
+            return speak_openai(text, character, delivery, stem)
+        except Exception as e:
+            print(f"OpenAI voice {character.voice} failed ({e}); using a Microsoft voice for this line.")
+            character = replace(character, voice=FALLBACK_VOICE, rate="+8%", pitch="+0Hz", engine="edge")
     return speak_edge(text, character, delivery, stem)

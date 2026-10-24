@@ -14,7 +14,7 @@ import wave
 from datetime import datetime
 
 from . import captions, config, images, story, telegram, video, voice
-from .cast import narrator, speaker_for
+from .cast import pick_narrator, speakers_for
 
 
 def join_audio(clips, out_path):
@@ -47,8 +47,8 @@ def finish_audio(raw, out_path, speed):
 
 
 def make_voices(script, workdir):
-    speakers = {c["id"]: speaker_for(c) for c in script["characters"]}
-    speakers["narrator"] = narrator()
+    speakers = speakers_for(script)
+    print(f"Narrator voice: {speakers['narrator'].engine} {speakers['narrator'].voice}")
     clips, owners = [], []
     for si, scene in enumerate(script["scenes"]):
         for line in scene["lines"]:
@@ -102,6 +102,8 @@ def run(idea=None, sample=False, topic_finder=None):
     else:
         topic = idea or (topic_finder() if topic_finder else None)
         script = story.write_story(story.pick_brief(topic))
+    forced = os.environ.get("NARRATOR", "").strip()
+    script["narrator"] = int(forced) - 1 if forced.isdigit() and int(forced) > 0 else pick_narrator()
     workdir.mkdir(parents=True, exist_ok=True)
     (workdir / "story.json").write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps(script, indent=2, ensure_ascii=False))
