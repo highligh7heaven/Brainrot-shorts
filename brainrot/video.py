@@ -1,98 +1,58 @@
-"""Puts the video together with ffmpeg: background (gameplay clip if there is
-one, otherwise a moving colour background), the characters (the speaker
-jumps up front and bounces, the others wait small and dimmed at the sides),
-the captions and the voices."""
+"""Puts the video together with ffmpeg: one full-screen picture per scene with
+a slow movie-style zoom and pan, the captions and the voices."""
 
-import random
 import subprocess
 
 from . import config
-from .cast import image_path
 
-BIG, SMALL = 660, 340          # character sizes in pixels (talking / waiting)
-BIG_Y = 340                    # top of the talking character
-# Where waiting characters peek in from the screen edges: (left x, top y).
-SLOTS = [(-70, 760), (config.WIDTH - SMALL + 70, 760), (config.WIDTH - SMALL + 70, 330)]
+ZOOM = 0.14          # how far each picture zooms in or out over its scene
+WORK_SCALE = 2       # zoom on a bigger copy so the movement is smooth
 
-PALETTES = [
-    ("0x7b2ff7", "0xf107a3", "0x00d4ff"),
-    ("0xff6a00", "0xee0979", "0xffd200"),
-    ("0x11998e", "0x38ef7d", "0x0575e6"),
-    ("0xfc466b", "0x3f5efb", "0xf9d423"),
-    ("0x8e2de2", "0x4a00e0", "0xff0080"),
-    ("0xf12711", "0xf5af19", "0x2af598"),
+# Camera moves, used in turn: (start zoom, end zoom, x drift, y drift)
+MOVES = [
+    (1.0, 1 + ZOOM, 0.0, -0.3),
+    (1 + ZOOM, 1.0, 0.3, 0.0),
+    (1.0, 1 + ZOOM, -0.3, 0.2),
+    (1 + ZOOM * 0.6, 1 + ZOOM, 0.4, 0.0),
 ]
 
 
-def gameplay_clips():
-    if not config.GAMEPLAY_DIR.exists():
-        return []
-    return sorted(p for p in config.GAMEPLAY_DIR.iterdir() if p.suffix.lower() in (".mp4", ".mov", ".webm", ".mkv"))
-
-
-def background_input(duration, rng):
-    """ffmpeg input arguments and a filter that turns it into a 1080x1920 picture."""
+def scene_filter(index, frames, move):
     w, h = config.WIDTH, config.HEIGHT
-    clips = gameplay_clips()
-    if clips:
-        clip = rng.choice(clips)
-        length = float(subprocess.run(
-            ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=nw=1:nk=1", str(clip)],
-            capture_output=True, text=True, check=True).stdout.strip())
-        start = rng.uniform(0, max(length - duration - 1, 0))
-        args = ["-ss", f"{start:.2f}", "-stream_loop", "-1", "-i", str(clip)]
-        filt = (f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
-                f"fps={config.FPS},eq=brightness=-0.06:saturation=1.1,setsar=1")
-        return args, filt
-    c0, c1, c2 = rng.choice(PALETTES)
-    args = ["-f", "lavfi", "-i",
-            f"gradients=s={w}x{h}:c0={c0}:c1={c1}:c2={c2}:n=3:speed=0.015:r={config.FPS}:d={duration:.2f}"]
-    return args, "setsar=1"
+    big_w, big_h = w * WORK_SCALE, h * WORK_SCALE
+    z0, z1, dx, dy = move
+    p = f"(on/{max(frames - 1, 1)})"
+    zoom = f"{z0}+({z1 - z0})*{p}"
+    # Centre the crop, then drift it a little towards one side.
+    x = f"(iw-iw/zoom)/2+({dx})*(iw-iw/zoom)/2*{p}"
+    y = f"(ih-ih/zoom)/2+({dy})*(ih-ih/zoom)/2*{p}"
+    return (f"[{index}:v]scale={big_w}:{big_h}:force_original_aspect_ratio=increase,crop={big_w}:{big_h},"
+            f"zoompan=z='{zoom}':x='{x}':y='{y}':d={frames}:s={w}x{h}:fps={config.FPS},"
+            f"setsar=1,format=yuv420p[s{index}]")
 
 
-def between(spans):
-    return "+".join(f"between(t,{a:.2f},{b:.2f})" for a, b in spans) or "0"
-
-
-def render(turns, characters, audio, ass_path, duration, out_path, seed=None):
-    """turns: [(character_id, start, end)] when each character speaks."""
-    rng = random.Random(seed)
-    bg_args, bg_filter = background_input(duration, rng)
-    args = ["ffmpeg", "-v", "error", "-y", *bg_args]
-    for c in characters:
-        args += ["-loop", "1", "-framerate", str(config.FPS), "-t", f"{duration:.2f}", "-i", str(image_path(c))]
+def render(images, spans, audio, ass_path, duration, out_path):
+    """images: one picture per scene. spans: (start, end) seconds of each scene."""
+    args = ["ffmpeg", "-v", "error", "-y"]
+    for img in images:
+        args += ["-i", str(img)]
     args += ["-i", str(audio)]
-    audio_index = len(characters) + 1
 
-    filters = [f"[0:v]{bg_filter},trim=duration={duration:.2f}[bg]"]
-    talking = {c.id: between([(s, e) for cid, s, e in turns if cid == c.id]) for c in characters}
-    for k, c in enumerate(characters):
-        filters.append(f"[{k + 1}:v]format=rgba,split[big{k}][small{k}]")
-        # Talking: big, centred, bouncing and wobbling.
-        filters.append(
-            f"[big{k}]scale={BIG}:{BIG}:force_original_aspect_ratio=decrease,"
-            f"rotate='0.05*sin(2*PI*t*1.7)':c=none:ow='rotw(0.08)':oh='roth(0.08)'[b{k}]")
-        # Waiting: small, a bit see-through and gently swaying.
-        filters.append(
-            f"[small{k}]scale={SMALL}:{SMALL}:force_original_aspect_ratio=decrease,"
-            f"colorchannelmixer=aa=0.8,rotate='0.05*sin(2*PI*t*0.6+{k})':c=none:ow='rotw(0.07)':oh='roth(0.07)'[s{k}]")
-    # Waiting characters first, so whoever is talking is always drawn on top.
-    last = "bg"
-    for k, c in enumerate(characters):
-        x, y = SLOTS[k % len(SLOTS)]
-        filters.append(f"[{last}][s{k}]overlay=x={x}:y='{y}+10*sin(t*2+{k})':enable='not({talking[c.id]})'[w{k}]")
-        last = f"w{k}"
-    for k, c in enumerate(characters):
-        filters.append(
-            f"[{last}][b{k}]overlay=x='(W-w)/2':y='{BIG_Y}-abs(sin(t*9))*28':enable='{talking[c.id]}'[t{k}]")
-        last = f"t{k}"
+    filters, frames_so_far = [], 0
+    for i, (start, end) in enumerate(spans):
+        end_frame = round((duration if i == len(spans) - 1 else end) * config.FPS)
+        frames = max(end_frame - frames_so_far, 1)
+        frames_so_far += frames
+        filters.append(scene_filter(i, frames, MOVES[i % len(MOVES)]))
+    joined = "".join(f"[s{i}]" for i in range(len(images)))
+    filters.append(f"{joined}concat=n={len(images)}:v=1:a=0[slides]")
 
     font_dir = str(config.FONT_FILE.parent)
     ass = str(ass_path).replace("\\", "/").replace(":", r"\:")
-    filters.append(f"[{last}]ass='{ass}':fontsdir='{font_dir}',format=yuv420p[v]")
+    filters.append(f"[slides]ass='{ass}':fontsdir='{font_dir}',format=yuv420p[v]")
 
-    args += ["-filter_complex", ";".join(filters), "-map", "[v]", "-map", f"{audio_index}:a",
-             "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-maxrate", "6M", "-bufsize", "12M",
+    args += ["-filter_complex", ";".join(filters), "-map", "[v]", "-map", f"{len(images)}:a",
+             "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-maxrate", "7M", "-bufsize", "14M",
              "-profile:v", "high", "-r", str(config.FPS),
              "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
              "-t", f"{duration:.2f}", "-movflags", "+faststart", str(out_path)]

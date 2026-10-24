@@ -2,7 +2,7 @@
 
     python -m brainrot.main                 # trend or random idea, real story from Claude
     python -m brainrot.main --idea "..."    # your own idea
-    python -m brainrot.main --sample        # built-in test story, no API key needed
+    python -m brainrot.main --sample        # built-in test story, no story key needed
 """
 
 import argparse
@@ -12,13 +12,13 @@ import time
 import wave
 from datetime import datetime
 
-from . import captions, config, story, video, voice
-from .cast import BY_ID
+from . import captions, config, images, story, video, voice
+from .cast import narrator, speaker_for
 
 
 def join_audio(clips, out_path):
     """Glues the voice clips together with a short pause between lines.
-    Returns where each clip starts in the joined audio."""
+    Returns where each clip starts in the joined audio, and the total length."""
     starts, t = [], 0.0
     with wave.open(str(out_path), "wb") as out:
         out.setnchannels(1)
@@ -45,13 +45,21 @@ def finish_audio(raw, out_path, speed):
                     str(out_path)], check=True)
 
 
-def make_video(script, workdir, seed=None):
-    workdir.mkdir(parents=True, exist_ok=True)
-    clips = []
-    for i, line in enumerate(script["lines"]):
-        character = BY_ID[line["who"]]
-        clips.append(voice.speak(line["text"], character, line["delivery"], str(workdir / f"line{i:02d}")))
+def make_voices(script, workdir):
+    speakers = {c["id"]: speaker_for(c) for c in script["characters"]}
+    speakers["narrator"] = narrator()
+    clips, owners = [], []
+    for si, scene in enumerate(script["scenes"]):
+        for line in scene["lines"]:
+            stem = str(workdir / f"line{len(clips):02d}")
+            clips.append(voice.speak(line["text"], speakers[line["who"]], line["delivery"], stem))
+            owners.append(si)
+    return clips, owners
 
+
+def make_video(script, workdir, part_label=None):
+    workdir.mkdir(parents=True, exist_ok=True)
+    clips, owners = make_voices(script, workdir)
     starts, total = join_audio(clips, workdir / "voices_raw.wav")
     speed = 1.0
     if total > config.MAX_SECONDS:
@@ -61,20 +69,21 @@ def make_video(script, workdir, seed=None):
     finish_audio(workdir / "voices_raw.wav", workdir / "voices.wav", speed)
     duration = total / speed + 0.6     # a beat of silence at the end
 
-    segments, turns = [], []
-    for line, clip, start in zip(script["lines"], clips, starts):
-        words = [(w, (start + a) / speed, (start + b) / speed) for w, a, b in clip.words]
-        segments.append((BY_ID[line["who"]], words))
-        turns.append((line["who"], start / speed, (start + clip.duration) / speed))
-    # The talking character stays up front through the short pause after their line.
-    turns = [(cid, s, (turns[i + 1][1] if i + 1 < len(turns) else duration)) for i, (cid, s, _) in enumerate(turns)]
+    words, spans = [], []
+    for clip, start, scene in zip(clips, starts, owners):
+        words += [(w, (start + a) / speed, (start + b) / speed) for w, a, b in clip.words]
+        if len(spans) <= scene:
+            spans.append([start / speed, (start + clip.duration) / speed])
+        spans[scene][1] = (start + clip.duration) / speed
+    # Each picture stays until the next scene begins.
+    spans = [(0.0 if i == 0 else s, spans[i + 1][0] if i + 1 < len(spans) else duration)
+             for i, (s, _) in enumerate(spans)]
 
     ass_path = workdir / "captions.ass"
-    ass_path.write_text(captions.build(segments, script["on_screen_title"], duration), encoding="utf-8")
-
-    characters = [BY_ID[i] for i in script["brief"]["characters"]]
+    ass_path.write_text(captions.build(words, duration, part_label), encoding="utf-8")
+    pictures = images.make_images(script, workdir / "images")
     out = workdir / "short.mp4"
-    video.render(turns, characters, workdir / "voices.wav", ass_path, duration, out, seed=seed)
+    video.render(pictures, spans, workdir / "voices.wav", ass_path, duration, out)
     return out, duration
 
 
@@ -86,8 +95,7 @@ def post_text(script):
 
 def run(idea=None, sample=False, topic_finder=None):
     started = time.time()
-    stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
-    workdir = config.OUTPUT_DIR / stamp
+    workdir = config.OUTPUT_DIR / datetime.now().strftime("%Y-%m-%d_%H%M")
     if sample:
         script = story.sample_story()
     else:

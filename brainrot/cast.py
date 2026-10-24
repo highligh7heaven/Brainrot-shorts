@@ -1,96 +1,43 @@
-"""The channel's own cast of brainrot characters.
+"""Voices for the narrator and the characters.
 
-Each character has one reference picture in assets/characters/<id>.png that
-is reused in every video, so they always look the same. Until a picture
-exists, a simple placeholder is drawn so the rest of the system still works.
+Characters are invented fresh for each story (fruit and food people), so the
+story only says what kind of voice each one has; this file turns that into a
+real Microsoft Edge voice.
 """
 
 from dataclasses import dataclass
 
-from PIL import Image, ImageDraw
+NARRATOR = ("en-US-AndrewMultilingualNeural", "+8%", "-2Hz")
 
-from . import config
+# kind of voice -> (Edge voice, speed, pitch)
+VOICES = {
+    "man": ("en-US-GuyNeural", "+8%", "+0Hz"),
+    "deep_man": ("en-US-ChristopherNeural", "+4%", "-6Hz"),
+    "old_man": ("en-US-RogerNeural", "+0%", "-4Hz"),
+    "italian_man": ("it-IT-GiuseppeMultilingualNeural", "+8%", "+0Hz"),
+    "woman": ("en-US-AvaMultilingualNeural", "+8%", "+0Hz"),
+    "posh_woman": ("en-GB-SoniaNeural", "+6%", "+0Hz"),
+    "old_woman": ("it-IT-IsabellaMultilingualNeural", "+0%", "-4Hz"),
+    "girl": ("en-US-AnaNeural", "+6%", "+0Hz"),
+    "boy": ("en-GB-MaisieNeural", "+6%", "-6Hz"),
+}
+VOICE_KINDS = list(VOICES)
 
 
 @dataclass(frozen=True)
-class Character:
+class Speaker:
     id: str
     name: str
-    look: str          # what the picture shows (also used to draw it)
-    personality: str   # how they talk and act in stories
-    voice: str         # Microsoft Edge voice
-    rate: str = "+10%"
-    pitch: str = "+0Hz"
-    color: str = "#ff3d7f"
+    voice: str
+    rate: str
+    pitch: str
 
 
-CAST = [
-    Character(
-        "spaghettino", "Spaghettino Turbino",
-        "a single wiggly spaghetti noodle with two tiny jet engines and racing goggles",
-        "hyperactive, always in a hurry, shouts everything, thinks speed solves every problem",
-        "it-IT-GiuseppeMultilingualNeural", "+20%", "+8Hz", "#f7c948"),
-    Character(
-        "frigorifero", "Frigorifero Leone",
-        "a white kitchen fridge with a huge golden lion's mane and a crown magnet",
-        "dramatic royal, speaks like a movie trailer narrator, deeply offended by everything",
-        "en-US-ChristopherNeural", "+0%", "-6Hz", "#e8e8e8"),
-    Character(
-        "pinguino", "Pinguino Espresso",
-        "a small penguin whose body is a steaming espresso cup",
-        "jittery fast-talker, over-caffeinated, has a conspiracy theory for everything",
-        "en-AU-WilliamNeural", "+25%", "+4Hz", "#8b5a2b"),
-    Character(
-        "nonna", "Nonna Tornado",
-        "a tiny grandma spinning inside her own small tornado, holding a wooden spoon",
-        "sweet but terrifying, gives life advice that makes no sense, threatens with the spoon",
-        "it-IT-IsabellaMultilingualNeural", "+5%", "+0Hz", "#9ad1ff"),
-    Character(
-        "sandalino", "Sandalino Gigantino",
-        "a giant blue flip-flop with muscular legs and sunglasses",
-        "lovable and not very smart, takes everything literally, very proud of his legs",
-        "en-US-GuyNeural", "+5%", "-4Hz", "#3d8bff"),
-    Character(
-        "gattino", "Gattino Pomodoro",
-        "a round red tomato with cat ears, whiskers and a tail",
-        "sassy and judgemental, rates everything out of ten, secretly the smartest one",
-        "en-GB-MaisieNeural", "+10%", "+0Hz", "#ff4b3e"),
-    Character(
-        "tostapane", "Tostapane Tenore",
-        "a shiny chrome toaster with a curly opera moustache, toast popping out like a hat",
-        "sings his feelings like an opera tenor, cries easily, very loud",
-        "de-DE-FlorianMultilingualNeural", "+0%", "-2Hz", "#c0c6cc"),
-    Character(
-        "polpo", "Polpo Pilota",
-        "a purple octopus wearing an old pilot helmet and scarf, each tentacle holding a gadget",
-        "overconfident inventor, every plan is genius and every plan fails",
-        "en-US-AndrewMultilingualNeural", "+10%", "+0Hz", "#a35cff"),
-]
-
-BY_ID = {c.id: c for c in CAST}
+def narrator():
+    voice, rate, pitch = NARRATOR
+    return Speaker("narrator", "Narrator", voice, rate, pitch)
 
 
-def image_path(character):
-    """The character's picture, drawing a placeholder first if it's missing."""
-    path = config.CHARACTER_DIR / f"{character.id}.png"
-    if not path.exists():
-        path = config.OUTPUT_DIR / "placeholders" / f"{character.id}.png"
-        if not path.exists():
-            path.parent.mkdir(parents=True, exist_ok=True)
-            draw_placeholder(character).save(path)
-    return path
-
-
-def draw_placeholder(character, size=720):
-    """A friendly blob with eyes: clearly a stand-in until the real picture exists."""
-    img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    d = ImageDraw.Draw(img)
-    pad = size // 12
-    d.rounded_rectangle((pad, pad, size - pad, size - pad * 3), radius=size // 4,
-                        fill=character.color, outline="black", width=size // 60)
-    for cx in (size * 0.36, size * 0.64):
-        r = size * 0.09
-        d.ellipse((cx - r, size * 0.32 - r, cx + r, size * 0.32 + r), fill="white", outline="black", width=6)
-        d.ellipse((cx - r / 2.4, size * 0.33 - r / 2.4, cx + r / 2.4, size * 0.33 + r / 2.4), fill="black")
-    d.arc((size * 0.36, size * 0.38, size * 0.64, size * 0.6), 20, 160, fill="black", width=size // 50)
-    return img
+def speaker_for(character):
+    voice, rate, pitch = VOICES.get(character.get("voice"), VOICES["man"])
+    return Speaker(character["id"], character["name"], voice, rate, pitch)
