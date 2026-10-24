@@ -102,6 +102,9 @@ def run(idea=None, sample=False, topic_finder=None):
     else:
         topic = idea or (topic_finder() if topic_finder else None)
         script = story.write_story(story.pick_brief(topic))
+    workdir.mkdir(parents=True, exist_ok=True)
+    (workdir / "story.json").write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(json.dumps(script, indent=2, ensure_ascii=False))
     path, duration = make_video(script, workdir)
     (workdir / "story.json").write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
     (workdir / "post.txt").write_text(post_text(script), encoding="utf-8")

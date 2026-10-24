@@ -189,7 +189,8 @@ def check_story(story, brief):
         c["id"] = slug(c["id"])
         ids[c["id"]] = c
     for scene in story["scenes"]:
-        scene["lines"] = [l for l in scene["lines"] if l["text"].strip()]
+        # Lines without any letters (like "...") can't be spoken.
+        scene["lines"] = [l for l in scene["lines"] if re.search(r"[A-Za-z0-9]", l["text"])]
         for line in scene["lines"]:
             who = slug(line["who"])
             line["who"] = who if who in ids else "narrator"

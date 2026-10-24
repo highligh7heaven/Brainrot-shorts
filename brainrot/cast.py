@@ -17,7 +17,7 @@ VOICES = {
     "italian_man": ("it-IT-GiuseppeMultilingualNeural", "+8%", "+0Hz"),
     "woman": ("en-US-AvaMultilingualNeural", "+8%", "+0Hz"),
     "posh_woman": ("en-GB-SoniaNeural", "+6%", "+0Hz"),
-    "old_woman": ("it-IT-IsabellaMultilingualNeural", "+0%", "-4Hz"),
+    "old_woman": ("en-US-EmmaMultilingualNeural", "-4%", "-8Hz"),
     "girl": ("en-US-AnaNeural", "+6%", "+0Hz"),
     "boy": ("en-GB-MaisieNeural", "+6%", "-6Hz"),
 }

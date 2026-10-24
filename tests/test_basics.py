@@ -18,6 +18,12 @@ class StoryTests(unittest.TestCase):
         tidy = story.check_story(raw, raw["brief"])
         self.assertEqual(tidy["scenes"][0]["lines"][0]["who"], "narrator")
 
+    def test_unspeakable_lines_dropped(self):
+        raw = story.sample_story()
+        raw["scenes"][0]["lines"].append({"who": "narrator", "text": "...", "delivery": "normal"})
+        tidy = story.check_story(raw, raw["brief"])
+        self.assertNotIn("...", [l["text"] for l in tidy["scenes"][0]["lines"]])
+
     def test_missing_tags_added(self):
         raw = story.sample_story()
         raw["hashtags"] = ["funny"]

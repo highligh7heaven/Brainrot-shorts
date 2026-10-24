@@ -76,18 +76,44 @@ async def _edge(text, voice, rate, pitch, volume, mp3):
     return words
 
 
+FALLBACK_VOICE = "en-US-AndrewMultilingualNeural"
+_available = None
+
+
+def available_voices():
+    """Names of the voices Microsoft offers right now (empty if the list can't be read)."""
+    global _available
+    if _available is None:
+        import edge_tts
+
+        try:
+            _available = {v["ShortName"] for v in asyncio.run(edge_tts.list_voices())}
+        except Exception:
+            _available = set()
+    return _available
+
+
 def speak_edge(text, character, delivery, stem):
     rate, pitch, volume = prosody(character, delivery)
+    voice = character.voice
+    known = available_voices()
+    if known and voice not in known:
+        print(f"Voice {voice} isn't offered by Microsoft any more; using {FALLBACK_VOICE}.")
+        voice = FALLBACK_VOICE
     mp3, wav = f"{stem}.mp3", f"{stem}.wav"
+    # Try the chosen voice, then the same voice without speed/pitch changes, then a safe voice.
+    attempts = [(voice, rate, pitch, volume), (voice, rate, pitch, volume),
+                (voice, "+0%", "+0Hz", "+0%"), (FALLBACK_VOICE, "+0%", "+0Hz", "+0%")]
     last = None
-    for attempt in range(3):
+    for v, r, p, vol in attempts:
         try:
-            words = asyncio.run(_edge(text, character.voice, rate, pitch, volume, mp3))
+            words = asyncio.run(_edge(text, v, r, p, vol, mp3))
             to_wav(mp3, wav)
             duration = duration_of(wav)
             return Clip(wav, duration, words or spread_words(text, duration))
-        except Exception as e:   # network hiccups: try again
+        except Exception as e:
             last = e
+            print(f"Voice {v} ({r}, {p}) failed on {text!r}: {e}")
     raise RuntimeError(f"The Microsoft voice service didn't answer ({last}).")
 
 
