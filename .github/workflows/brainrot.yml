@@ -1,13 +1,20 @@
 name: Brainrot Shorts
 
 # Makes one finished Short on GitHub's computers and sends it to your
-# Telegram bot. Start it from the GitHub app: Actions -> Brainrot Shorts ->
-# Run workflow. The automatic 3-a-day schedule is added once a manual run works.
+# Telegram bot.
+#
+# Automatic: GitHub checks every hour and makes a video at your daily times.
+# Change them in Settings -> Secrets and variables -> Actions -> Variables:
+#   POST_TIMES  e.g. "8am, 1pm, 7pm"        (default)
+#   TIMEZONE    e.g. "America/Vancouver"    (default)
+# By hand: GitHub app -> Actions -> Brainrot Shorts -> Run workflow.
 on:
+  schedule:
+    - cron: "17 * * * *"   # every hour at :17; the check below decides
   workflow_dispatch:
     inputs:
       idea:
-        description: "Your own idea in a few words (leave blank to use a trend)"
+        description: "Your own idea in a few words (starts a new series; blank = continue or use a trend)"
         required: false
         default: ""
       test:
@@ -24,15 +31,50 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write   # lets a test run save its preview to the "previews" branch
+  contents: write   # saves the robot's memory and test previews
 
 jobs:
+  check:
+    name: Is it time for a video?
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      run: ${{ steps.when.outputs.run }}
+      slot: ${{ steps.when.outputs.slot }}
+    env:
+      PYTHONTZPATH: ""   # use the up-to-date tzdata package for time zones
+    steps:
+      - uses: actions/checkout@v4
+        if: github.event_name == 'schedule'
+
+      - uses: actions/setup-python@v5
+        if: github.event_name == 'schedule'
+        with:
+          python-version: "3.12"
+
+      - name: Check the time
+        id: when
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "Started by hand, so making a video now."
+          else
+            pip install -q -U tzdata
+            python -m brainrot.schedule
+          fi
+        env:
+          POST_TIMES: ${{ vars.POST_TIMES }}
+          TIMEZONE: ${{ vars.TIMEZONE }}
+
   make:
     name: Make a Short
+    needs: check
+    if: needs.check.outputs.run == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
       BRAINROT_OUT: ${{ github.workspace }}/output
+      PYTHONTZPATH: ""
     steps:
       - name: Get the code
         uses: actions/checkout@v4
@@ -55,10 +97,25 @@ jobs:
         env:
           IDEA: ${{ inputs.idea }}
           NARRATOR: ${{ inputs.narrator }}
+          SLOT: ${{ needs.check.outputs.slot }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Save the robot's memory (series and past stories)
+        if: success() && !inputs.test
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state
+          if git diff --cached --quiet; then echo "Nothing new to remember."; exit 0; fi
+          git commit -q -m "Remember run ${{ github.run_number }}"
+          for i in 1 2 3; do
+            git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0
+            sleep 5
+          done
+          echo "Couldn't save the memory" && exit 1
 
       - name: Keep a copy of the files for 3 days
         if: always()

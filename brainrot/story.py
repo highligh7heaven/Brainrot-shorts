@@ -64,8 +64,9 @@ Rules for every script:
 - 110 to 140 words in total (38-50 seconds read aloud), in 5 to 7 scenes. Each scene is one
   picture with 1 to 3 short lines. Mostly the narrator in punchy present-tense sentences, with
   a few short, strong lines spoken by the characters.
-- Big emotions, clear villain and underdog, an escalating twist, and a last line that is a
-  cliffhanger or a satisfying karma punch.
+- Big emotions, clear villain and underdog, an escalating twist. Stories are told as a series
+  of 3-4 parts: every part except the last ends on a cliffhanger; the final part ends with a
+  satisfying karma payoff that resolves the series.
 - 2 to 4 characters, each a fruit or food person with a memorable name (like "Mrs Banana",
   "Pomegranate Pete"). "look" describes their head, face, body and clothes in one sentence so
   they are drawn the same in every scene. "voice" is the kind of voice.
@@ -76,10 +77,13 @@ Rules for every script:
   If the trending topic is sad, serious or political, ignore it and only borrow a harmless
   word or vibe from it.
 - Never mention AI, the script, or the channel.
-- title: an emotional curiosity-gap title under 70 characters, no hashtags or emojis.
+- title: an emotional curiosity-gap title under 60 characters, no hashtags or emojis, without
+  "Part" in it (the part number is added automatically).
+- series_title: a short name for the whole series (same for every part), like "The Golden Daughter".
 - description: 1-2 short sentences plus a question that invites comments.
 - hashtags: 4-6 tags starting with #, always including #shorts and #brainrot.
-- cliffhanger: one sentence saying what part 2 would be about."""
+- summary: one sentence saying what happened in this part.
+- cliffhanger: one sentence saying what the next part will be about (or "" for the final part)."""
 
 
 def schema():
@@ -97,6 +101,7 @@ def schema():
         "type": "object",
         "properties": {
             "title": {"type": "string"},
+            "series_title": {"type": "string"},
             "characters": {
                 "type": "array",
                 "items": {
@@ -125,9 +130,11 @@ def schema():
             },
             "description": {"type": "string"},
             "hashtags": {"type": "array", "items": {"type": "string"}},
+            "summary": {"type": "string"},
             "cliffhanger": {"type": "string"},
         },
-        "required": ["title", "characters", "scenes", "description", "hashtags", "cliffhanger"],
+        "required": ["title", "series_title", "characters", "scenes", "description", "hashtags",
+                     "summary", "cliffhanger"],
         "additionalProperties": False,
     }
 
@@ -140,13 +147,38 @@ def pick_brief(topic=None, rng=random, avoid=()):
         "place": rng.choice(PLACES),
         "twist": rng.choice(TWISTS),
         "avoid": list(avoid)[-30:],
+        "series": None,
     }
 
 
+def series_prompt(series):
+    part, total = series["part"] + 1, series["total"]
+    ending = ("This is the FINAL part: resolve the whole series with a satisfying karma payoff. "
+              "No cliffhanger, cliffhanger is \"\"." if part == total else
+              "End on a new cliffhanger that makes people want the next part.")
+    if part == 1:
+        return f"This is PART 1 of a new {total}-part series. {ending}\n\n"
+    people = "\n".join(f"- id {c['id']}: {c['name']}, {c['look']} (voice: {c['voice']})"
+                       for c in series["characters"])
+    so_far = "\n".join(series["so_far"])
+    return (f"This is PART {part} of {total} of the series \"{series['title']}\" "
+            f"(keep series_title exactly the same).\n"
+            f"Story so far:\n{so_far}\n"
+            f"Last part ended with: {series['cliffhanger']}\n"
+            f"Use these same characters with exactly the same id, name, look and voice "
+            f"(you may add at most one new character):\n{people}\n"
+            f"The hook line should hit the stakes of this part straight away, no recap. {ending}\n\n")
+
+
 def brief_prompt(brief):
+    series = brief.get("series")
+    if series and series["part"] >= 1:
+        return series_prompt(series) + "Past stories, do NOT repeat their premise:\n" + (
+            "\n".join(f"- {a}" for a in brief["avoid"]) or "- (nothing yet)")
     topic = brief["topic"] or "no specific topic, invent something fresh"
     avoid = "\n".join(f"- {a}" for a in brief["avoid"]) or "- (nothing yet)"
-    return (f"Topic or trend to riff on: {topic}\n"
+    return ((series_prompt(series) if series else "") +
+            f"Topic or trend to riff on: {topic}\n"
             f"Kind of drama: {brief['drama']}\n"
             f"Main place: {brief['place']}\n"
             f"Kind of twist: {brief['twist']}\n\n"
@@ -186,8 +218,11 @@ def slug(text):
 def check_story(story, brief):
     """Tidies the script so the rest of the system can trust it."""
     ids = {}
-    for c in story["characters"]:
+    fixed = {c["id"]: c for c in ((brief.get("series") or {}).get("characters") or [])}
+    for i, c in enumerate(story["characters"]):
         c["id"] = slug(c["id"])
+        if c["id"] in fixed:
+            story["characters"][i] = c = dict(fixed[c["id"]])
         ids[c["id"]] = c
     for scene in story["scenes"]:
         # Lines without any letters (like "...") can't be spoken.
@@ -203,13 +238,17 @@ def check_story(story, brief):
         if must not in [t.lower() for t in tags]:
             tags.append(must)
     story["hashtags"] = [t.replace(" ", "") for t in tags][:8]
+    story.setdefault("series_title", story["title"])
+    story.setdefault("summary", "")
+    story.setdefault("cliffhanger", "")
     story["brief"] = brief
     return story
 
 
 def sample_story():
     """A ready-made script for testing without an API key."""
-    brief = {"topic": "test", "drama": DRAMAS[0], "place": PLACES[0], "twist": TWISTS[0], "avoid": []}
+    brief = {"topic": "test", "drama": DRAMAS[0], "place": PLACES[0], "twist": TWISTS[0], "avoid": [],
+             "series": None}
     story = {
         "title": "She Gave Gold to One Daughter and Mud to the Other",
         "characters": [
