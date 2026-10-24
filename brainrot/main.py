@@ -13,7 +13,7 @@ import time
 import wave
 from datetime import datetime
 
-from . import captions, config, images, story, telegram, video, voice
+from . import captions, config, images, memory, story, telegram, trends, video, voice
 from .cast import pick_narrator, speakers_for
 
 
@@ -58,7 +58,7 @@ def make_voices(script, workdir):
     return clips, owners
 
 
-def make_video(script, workdir, part_label=None):
+def make_video(script, workdir, part_label=None, refs_dir=None):
     workdir.mkdir(parents=True, exist_ok=True)
     clips, owners = make_voices(script, workdir)
     starts, total = join_audio(clips, workdir / "voices_raw.wav")
@@ -82,7 +82,7 @@ def make_video(script, workdir, part_label=None):
 
     ass_path = workdir / "captions.ass"
     ass_path.write_text(captions.build(words, duration, part_label), encoding="utf-8")
-    pictures = images.make_images(script, workdir / "images")
+    pictures = images.make_images(script, workdir / "images", refs_dir)
     out = workdir / "short.mp4"
     video.render(pictures, spans, workdir / "voices.wav", ass_path, duration, out)
     return out, duration
@@ -94,25 +94,50 @@ def post_text(script):
             f"{' '.join(script['hashtags'])}")
 
 
-def run(idea=None, sample=False, topic_finder=None):
+def choose_narrator(series):
+    forced = os.environ.get("NARRATOR", "").strip()
+    if forced.isdigit() and int(forced) > 0:
+        return int(forced) - 1
+    if series and series.get("narrator") is not None:
+        return series["narrator"]      # same narrator for every part of a series
+    return pick_narrator()
+
+
+def run(idea=None, sample=False):
+    """Makes one video. Real runs continue the current series (or start a new
+    one from your idea or today's trends) and update the memory file."""
     started = time.time()
     workdir = config.OUTPUT_DIR / datetime.now().strftime("%Y-%m-%d_%H%M")
+    mem, series, refs_dir = None, None, None
     if sample:
         script = story.sample_story()
     else:
-        topic = idea or (topic_finder() if topic_finder else None)
-        script = story.write_story(story.pick_brief(topic))
-    forced = os.environ.get("NARRATOR", "").strip()
-    script["narrator"] = int(forced) - 1 if forced.isdigit() and int(forced) > 0 else pick_narrator()
+        mem = memory.load()
+        series = None if idea else memory.continuing(mem)
+        brief = story.pick_brief(None, avoid=memory.avoid_list(mem))
+        if not series:
+            # Your idea, or today's trends, starts a new series.
+            series = memory.new_series(datetime.now().strftime("%Y%m%d_%H%M"))
+            brief["topic"] = idea or trends.as_topic(trends.today())
+        brief["series"] = series
+        refs_dir = memory.refs_dir(series["id"])
+        script = story.write_story(brief)
+    script["narrator"] = choose_narrator(series)
+    part_label = f"PART {series['part'] + 1}" if series else None
+    if series:
+        script["title"] = f"{script['title']} (Part {series['part'] + 1})"
     workdir.mkdir(parents=True, exist_ok=True)
     (workdir / "story.json").write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps(script, indent=2, ensure_ascii=False))
-    path, duration = make_video(script, workdir)
-    (workdir / "story.json").write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
+    path, duration = make_video(script, workdir, part_label, refs_dir)
     (workdir / "post.txt").write_text(post_text(script), encoding="utf-8")
     size = path.stat().st_size / 1e6
     print(f"Made {path} ({duration:.1f}s, {size:.1f} MB) in {time.time() - started:.0f}s")
     print(post_text(script))
+    if mem is not None:
+        memory.record(mem, script, series)
+        memory.mark_slot(mem, os.environ.get("SLOT", "").strip())
+        memory.save(mem)
     return path, script
 
 

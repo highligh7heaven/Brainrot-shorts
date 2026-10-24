@@ -17,6 +17,26 @@ one to the Content Factory Telegram bot, ready to upload by hand.
 5. **Delivery:** the video goes to Telegram as a file (full quality),
    followed by the title, then the description and hashtags.
 
+## Series, trends and memory
+
+Stories run as series of 3–4 parts with the same characters, character
+pictures and narrator ("PART 2" shows on screen). A new series starts from
+your own idea or from today's Google Trends. `state/memory.json` remembers
+the running series, past stories (so none repeat) and which scheduled times
+already had their video. Every real run saves it back to the repository.
+
+## Schedule
+
+The workflow checks every hour. It makes a video when one of your daily times
+passed less than 3 hours ago and hasn't had its video yet, which also covers
+GitHub starting late and retries after a failed run. Change the times without
+touching code: Settings → Secrets and variables → Actions → **Variables**:
+
+| Variable | Default |
+|---|---|
+| `POST_TIMES` | `8am, 1pm, 7pm` |
+| `TIMEZONE` | `America/Vancouver` |
+
 ## Running it
 
 GitHub app → **Actions** → **Brainrot Shorts** → **Run workflow**. You can
@@ -44,6 +64,9 @@ No key is ever written in the code.
 | `brainrot/captions.py` | one-word captions (.ass) |
 | `brainrot/video.py` | zoom and pan slideshow, final MP4 |
 | `brainrot/telegram.py` | delivery |
+| `brainrot/memory.py` | series and past stories |
+| `brainrot/trends.py` | today's Google Trends |
+| `brainrot/schedule.py` | daily times check |
 | `brainrot/main.py` | runs everything in order |
 
 Tests: `python -m unittest`

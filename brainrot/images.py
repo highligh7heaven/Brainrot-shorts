@@ -40,8 +40,17 @@ def scene_prompt(scene, characters):
     return f"{IMAGE_STYLE} Scene: {scene['image']}. {cast} Keep each character exactly as in the reference pictures."
 
 
-def make_images(story, workdir):
-    """Returns one picture path per scene."""
+def small_copy(src, dst):
+    """Keeps a series' character pictures small enough to store in the repository."""
+    img = Image.open(src).convert("RGB")
+    img.thumbnail((768, 1152))
+    img.save(dst, "JPEG", quality=88)
+    return dst
+
+
+def make_images(story, workdir, refs_dir=None):
+    """Returns one picture path per scene. Character pictures already in
+    refs_dir (from earlier parts of the series) are reused, not redrawn."""
     workdir.mkdir(parents=True, exist_ok=True)
     if not has_key():
         return [placeholder(scene, i, workdir) for i, scene in enumerate(story["scenes"])]
@@ -51,9 +60,13 @@ def make_images(story, workdir):
     client = OpenAI()
     refs = {}
     for c in story["characters"]:
-        path = workdir / f"ref_{c['id']}.png"
-        refs[c["id"]] = _save(client.images.generate(
-            model=MODEL, prompt=character_prompt(c), size=SIZE, quality=QUALITY), path)
+        kept = refs_dir / f"{c['id']}.jpg" if refs_dir else None
+        if kept and kept.exists():
+            refs[c["id"]] = kept
+            continue
+        path = _save(client.images.generate(
+            model=MODEL, prompt=character_prompt(c), size=SIZE, quality=QUALITY), workdir / f"ref_{c['id']}.png")
+        refs[c["id"]] = small_copy(path, kept) if kept else path
 
     paths = []
     for i, scene in enumerate(story["scenes"]):
