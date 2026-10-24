@@ -1,0 +1,122 @@
+{
+  "title": "She Gave Gold to One Daughter and Mud to the Other",
+  "characters": [
+    {
+      "id": "mrs_banana",
+      "name": "Mrs Banana",
+      "voice": "posh_woman",
+      "look": "tall banana-headed woman with red lipstick, pearl earrings and a green satin gown"
+    },
+    {
+      "id": "goldie",
+      "name": "Goldie",
+      "voice": "girl",
+      "look": "little girl with a shiny golden lemon head and a cream dress"
+    },
+    {
+      "id": "lemmy",
+      "name": "Lemmy",
+      "voice": "girl",
+      "look": "little girl with a plain yellow lemon head, sad eyes and a faded blue dress"
+    }
+  ],
+  "scenes": [
+    {
+      "image": "mansion living room; mrs_banana pours liquid gold over goldie's head while holding a rusty bucket of mud over lemmy",
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "She poured gold on only one daughter.",
+          "delivery": "normal"
+        },
+        {
+          "who": "mrs_banana",
+          "text": "Goldie deserves to shine. You get the mud.",
+          "delivery": "normal"
+        }
+      ]
+    },
+    {
+      "image": "school hallway; goldie laughs with friends while lemmy walks alone, covered in dried mud",
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "At school, everyone loved the golden girl. Nobody sat with Lemmy.",
+          "delivery": "sad"
+        }
+      ]
+    },
+    {
+      "image": "small attic bedroom at night; lemmy secretly painting a beautiful picture by candlelight",
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "But every night, Lemmy painted in secret.",
+          "delivery": "whisper"
+        },
+        {
+          "who": "lemmy",
+          "text": "One day, they will see me.",
+          "delivery": "sad"
+        }
+      ]
+    },
+    {
+      "image": "art contest stage; a judge holds up lemmy's painting while the crowd gasps",
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "Then a famous art contest offered one million dollars.",
+          "delivery": "fast"
+        },
+        {
+          "who": "narrator",
+          "text": "Lemmy's painting won first place.",
+          "delivery": "shout"
+        }
+      ]
+    },
+    {
+      "image": "mansion; mrs_banana grabs the prize cheque, smiling greedily, goldie behind her",
+      "lines": [
+        {
+          "who": "mrs_banana",
+          "text": "Give me that money, I am her mother!",
+          "delivery": "shout"
+        }
+      ]
+    },
+    {
+      "image": "mansion doorway; lemmy stands proudly next to a kind old pineapple judge holding papers",
+      "lines": [
+        {
+          "who": "narrator",
+          "text": "But the judge had read the painting's secret title.",
+          "delivery": "normal"
+        },
+        {
+          "who": "narrator",
+          "text": "It was called: The Mother Who Chose Gold.",
+          "delivery": "whisper"
+        }
+      ]
+    }
+  ],
+  "description": "One daughter got gold, the other got mud. Did the mother deserve what came next?",
+  "hashtags": [
+    "#shorts",
+    "#brainrot",
+    "#fruitdrama",
+    "#aistory",
+    "#karma"
+  ],
+  "cliffhanger": "The judge reveals what he found out about Mrs Banana's past.",
+  "brief": {
+    "topic": "test",
+    "drama": "a parent who spoils one child and neglects the other",
+    "place": "a luxury mansion with chandeliers",
+    "twist": "the quiet one was secretly the richest all along",
+    "avoid": []
+  },
+  "narrator": 4
+}
