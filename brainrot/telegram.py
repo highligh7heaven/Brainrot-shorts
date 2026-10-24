@@ -36,6 +36,15 @@ def send(video_path, script):
                                "text": f"{script['description']}\n\n{' '.join(script['hashtags'])}"})
 
 
+def send_files(paths, note):
+    """Sends pictures as files (full quality), then a note."""
+    chat = os.environ["TELEGRAM_CHAT_ID"].strip()
+    for path in paths:
+        with open(path, "rb") as f:
+            _call("sendDocument", data={"chat_id": chat}, files={"document": (path.name, f)})
+    _call("sendMessage", data={"chat_id": chat, "text": note})
+
+
 def send_problem(message):
     """Lets you know when a run fails, so you're not left waiting."""
     if ready():
