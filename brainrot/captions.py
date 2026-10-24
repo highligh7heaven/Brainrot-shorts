@@ -18,7 +18,7 @@ DRAMATIC = {
     "gold", "golden", "million", "millions", "billion", "billions", "rich", "poor", "money", "never",
     "secret", "truth", "lie", "lied", "liar", "twins", "baby", "wedding", "fired", "karma", "revenge",
     "mother", "father", "daughter", "son", "hospital", "dead", "shocked", "shock", "everyone", "nobody",
-    "first", "last", "betrayed", "stole", "stolen", "cheated", "won", "lost", "free", "love", "hate",
+    "first", "last", "dollar", "dollars", "prize", "winner", "betrayed", "stole", "stolen", "cheated", "won", "lost", "free", "love", "hate",
 }
 
 

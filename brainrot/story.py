@@ -60,7 +60,7 @@ brainrot-style object character. The videos are a slideshow of movie-like scenes
 Rules for every script:
 - The FIRST line is the hook, said by the narrator: at most 8 words, dramatic and specific,
   so a scroller stops in the first 2 seconds (e.g. "She poured gold on only one daughter.").
-- 95 to 130 words in total (35-50 seconds read aloud), in 5 to 7 scenes. Each scene is one
+- 110 to 140 words in total (38-50 seconds read aloud), in 5 to 7 scenes. Each scene is one
   picture with 1 to 3 short lines. Mostly the narrator in punchy present-tense sentences, with
   a few short, strong lines spoken by the characters.
 - Big emotions, clear villain and underdog, an escalating twist, and a last line that is a
