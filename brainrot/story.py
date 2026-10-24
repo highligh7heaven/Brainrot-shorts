@@ -49,7 +49,8 @@ TWISTS = [
 
 IMAGE_STYLE = ("3D animated movie still in a glossy Pixar-like style with realistic textures. "
                "Characters are anthropomorphic fruit or food people: human bodies, clothes and hands, "
-               "with a big expressive fruit or food head and a detailed face. Cinematic lighting, "
+               "with a big expressive fruit or food head and a detailed face. Everyone in the picture, "
+               "including judges, doctors, guests and crowds, is a fruit or food person; no plain humans. Cinematic lighting, "
                "rich detailed setting, vertical portrait composition, no text, no captions, no logos.")
 
 SYSTEM = f"""You write scripts for a YouTube Shorts channel of viral "AI fruit drama" stories:
