@@ -1,7 +1,7 @@
 {
   "series": {
     "id": "20261025_0245",
-    "part": 1,
+    "part": 2,
     "total": 3,
     "title": "The Champagne Liar",
     "characters": [
@@ -31,9 +31,10 @@
       }
     ],
     "so_far": [
-      "Part 1: Broke Lemon Lenny lies to Madame Plum that he owns a champagne empire and the fancy restaurant, then gets handed a giant bill and a mysterious note from the quiet waiter."
+      "Part 1: Broke Lemon Lenny lies to Madame Plum that he owns a champagne empire and the fancy restaurant, then gets handed a giant bill and a mysterious note from the quiet waiter.",
+      "Part 2: Pierre confronts Lenny in the kitchen and demands he tell Sofia the truth, but Lenny fills the champagne bottles with sour lemon water instead, raising Madame Plum's suspicions."
     ],
-    "cliffhanger": "Lenny must fake his way through a lavish engagement party he can't pay for, while quiet Potato Pierre seems to know far more than he lets on.",
+    "cliffhanger": "Pierre reveals who really owns the restaurant in front of everyone, and Lenny's champagne empire is about to crumble.",
     "narrator": 2
   },
   "history": [
@@ -52,11 +53,16 @@
     {
       "title": "He Lied About Owning the Restaurant (Part 1)",
       "premise": "The Champagne Liar (part 1): Broke Lemon Lenny lies to Madame Plum that he owns a champagne empire and the fancy restaurant, then gets handed a giant bill and a mysterious note from the quiet waiter."
+    },
+    {
+      "title": "He Filled Champagne Bottles With Lemon Water (Part 2)",
+      "premise": "The Champagne Liar (part 2): Pierre confronts Lenny in the kitchen and demands he tell Sofia the truth, but Lenny fills the champagne bottles with sour lemon water instead, raising Madame Plum's suspicions."
     }
   ],
   "done_slots": [
     "2026-10-24 08:00",
     "2026-10-24 13:00",
-    "2026-10-24 19:00"
+    "2026-10-24 19:00",
+    "2026-10-25 08:00"
   ]
 }
