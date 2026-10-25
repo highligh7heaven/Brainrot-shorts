@@ -1,5 +1,41 @@
 {
-  "series": null,
+  "series": {
+    "id": "20261025_0245",
+    "part": 1,
+    "total": 3,
+    "title": "The Champagne Liar",
+    "characters": [
+      {
+        "id": "lenny",
+        "name": "Lemon Lenny",
+        "look": "A bright yellow lemon man with a smug grin, slicked-back leafy hair, in a shiny too-big gold suit and a borrowed bow tie.",
+        "voice": "man"
+      },
+      {
+        "id": "sofia",
+        "name": "Strawberry Sofia",
+        "look": "A sweet red strawberry woman with green leafy curls, big hopeful eyes, in an elegant pink evening dress and pearl earrings.",
+        "voice": "woman"
+      },
+      {
+        "id": "plum",
+        "name": "Madame Plum",
+        "look": "A plump purple plum lady with a raised eyebrow and lorgnette glasses, wearing a fur-trimmed violet gown and a sparkling tiara.",
+        "voice": "posh_woman"
+      },
+      {
+        "id": "pierre",
+        "name": "Potato Pierre",
+        "look": "A small humble brown potato man with calm kind eyes and a neat little mustache, in a crisp black waiter's vest and white gloves.",
+        "voice": "deep_man"
+      }
+    ],
+    "so_far": [
+      "Part 1: Broke Lemon Lenny lies to Madame Plum that he owns a champagne empire and the fancy restaurant, then gets handed a giant bill and a mysterious note from the quiet waiter."
+    ],
+    "cliffhanger": "Lenny must fake his way through a lavish engagement party he can't pay for, while quiet Potato Pierre seems to know far more than he lets on.",
+    "narrator": 2
+  },
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -12,10 +48,15 @@
     {
       "title": "One Orange Smudge Exposed the Real Saboteur (Part 3)",
       "premise": "The Bulldozer Betrayal (part 3): Mr Pineapple traces the carrot dust to Carl, who flees in the bulldozer and sinks it in the mud pit, while Bob rescues him, becomes foreman and gets his bulldozer back."
+    },
+    {
+      "title": "He Lied About Owning the Restaurant (Part 1)",
+      "premise": "The Champagne Liar (part 1): Broke Lemon Lenny lies to Madame Plum that he owns a champagne empire and the fancy restaurant, then gets handed a giant bill and a mysterious note from the quiet waiter."
     }
   ],
   "done_slots": [
     "2026-10-24 08:00",
-    "2026-10-24 13:00"
+    "2026-10-24 13:00",
+    "2026-10-24 19:00"
   ]
 }
