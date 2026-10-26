@@ -1,5 +1,35 @@
 {
-  "series": null,
+  "series": {
+    "id": "20261026_0350",
+    "part": 1,
+    "total": 3,
+    "title": "The Farm VIP Star",
+    "characters": [
+      {
+        "id": "pip",
+        "name": "Potato Pip",
+        "look": "A small lumpy brown potato with big shy blue eyes, a few sprouts on his head, smudges of mud on his cheeks, wearing patched blue overalls and worn rubber boots.",
+        "voice": "boy"
+      },
+      {
+        "id": "celeste",
+        "name": "Cherry Celeste",
+        "look": "A glossy bright red cherry with a curly green stem on her head, long fluttering eyelashes, a smug smile, wearing a sparkly gold gown and a tiny diamond tiara.",
+        "voice": "posh_woman"
+      },
+      {
+        "id": "pumpkin",
+        "name": "Judge Pumpkin",
+        "look": "A big round orange pumpkin with a thick vine moustache, kind tired eyes and half-moon glasses, wearing a straw hat and a brown tweed judge's jacket.",
+        "voice": "old_man"
+      }
+    ],
+    "so_far": [
+      "Part 1: Mocked outcast Potato Pip shocks the farm with a perfect-score song at the talent show, but on the eve of the final his microphone vanishes and a cherry stem is left behind."
+    ],
+    "cliffhanger": "With no microphone and the final tomorrow, Pip must find a way to sing while Cherry Celeste plots to ruin him for good.",
+    "narrator": 3
+  },
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -24,6 +54,10 @@
     {
       "title": "The Quiet Waiter Was the Real Owner All Along (Part 3)",
       "premise": "The Champagne Liar (part 3): Pierre reveals he owns the restaurant, Madame Plum exposes the lemon water, and Lenny gets stuck washing dishes to pay his bill while Sofia finds happiness with honest Pierre."
+    },
+    {
+      "title": "The Muddy Potato Who Silenced the Whole Farm (Part 1)",
+      "premise": "The Farm VIP Star (part 1): Mocked outcast Potato Pip shocks the farm with a perfect-score song at the talent show, but on the eve of the final his microphone vanishes and a cherry stem is left behind."
     }
   ],
   "done_slots": [
@@ -31,6 +65,7 @@
     "2026-10-24 13:00",
     "2026-10-24 19:00",
     "2026-10-25 08:00",
-    "2026-10-25 13:00"
+    "2026-10-25 13:00",
+    "2026-10-25 19:00"
   ]
 }
