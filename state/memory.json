@@ -1,5 +1,41 @@
 {
-  "series": null,
+  "series": {
+    "id": "20261027_2048",
+    "part": 1,
+    "total": 3,
+    "title": "The Olive Oil Inheritance",
+    "characters": [
+      {
+        "id": "mama",
+        "name": "Mama Olive",
+        "look": "A plump glossy dark green olive woman with sharp painted eyebrows, red lipstick, pearl necklace and a tight purple designer dress with a fur stole.",
+        "voice": "posh_woman"
+      },
+      {
+        "id": "gary",
+        "name": "Grape Gary",
+        "look": "A shiny round purple grape young man with a smug grin, slicked hair, sunglasses on his head, gold chains and a white tracksuit with gold sneakers.",
+        "voice": "man"
+      },
+      {
+        "id": "lucy",
+        "name": "Lime Lucy",
+        "look": "A small bright green lime girl with big hopeful eyes, freckles, a messy ponytail and a faded patched brown apron over a plain grey dress.",
+        "voice": "girl"
+      },
+      {
+        "id": "judge",
+        "name": "Judge Coconut",
+        "look": "A large hairy brown coconut man with bushy white eyebrows, round glasses and a long black judge's robe.",
+        "voice": "deep_man"
+      }
+    ],
+    "so_far": [
+      "Part 1: Mama Olive sues Lime Lucy for stealing the family recipe to give Grape Gary everything, but her own recipe book proves Lucy invented it."
+    ],
+    "cliffhanger": "A mysterious stranger bursts into court with a frozen jar of oil that could change who really owns the family fortune.",
+    "narrator": 5
+  },
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -36,6 +72,10 @@
     {
       "title": "The Tin Can Mic Caught the Cheater Red-Handed (Part 3)",
       "premise": "The Farm VIP Star (part 3): Pip's tin can microphone exposes Celeste's forged winner note, she is disqualified and sent to sweep the stage, and Pip is crowned the Farm VIP Star with Granny Corn by his side."
+    },
+    {
+      "title": "She Sued Her Own Daughter Over a Secret Recipe (Part 1)",
+      "premise": "The Olive Oil Inheritance (part 1): Mama Olive sues Lime Lucy for stealing the family recipe to give Grape Gary everything, but her own recipe book proves Lucy invented it."
     }
   ],
   "done_slots": [
@@ -46,6 +86,7 @@
     "2026-10-25 13:00",
     "2026-10-25 19:00",
     "2026-10-26 08:00",
-    "2026-10-27 08:00"
+    "2026-10-27 08:00",
+    "2026-10-27 13:00"
   ]
 }
