@@ -1,42 +1,5 @@
 {
-  "series": {
-    "id": "20261026_0350",
-    "part": 2,
-    "total": 3,
-    "title": "The Farm VIP Star",
-    "characters": [
-      {
-        "id": "pip",
-        "name": "Potato Pip",
-        "look": "A small lumpy brown potato with big shy blue eyes, a few sprouts on his head, smudges of mud on his cheeks, wearing patched blue overalls and worn rubber boots.",
-        "voice": "boy"
-      },
-      {
-        "id": "celeste",
-        "name": "Cherry Celeste",
-        "look": "A glossy bright red cherry with a curly green stem on her head, long fluttering eyelashes, a smug smile, wearing a sparkly gold gown and a tiny diamond tiara.",
-        "voice": "posh_woman"
-      },
-      {
-        "id": "pumpkin",
-        "name": "Judge Pumpkin",
-        "look": "A big round orange pumpkin with a thick vine moustache, kind tired eyes and half-moon glasses, wearing a straw hat and a brown tweed judge's jacket.",
-        "voice": "old_man"
-      },
-      {
-        "id": "granny",
-        "name": "Granny Corn",
-        "look": "A wrinkly old golden corn cob with soft white corn-silk hair in a bun, warm twinkly eyes behind round spectacles, wearing a green husk shawl and a flowery apron.",
-        "voice": "old_woman"
-      }
-    ],
-    "so_far": [
-      "Part 1: Mocked outcast Potato Pip shocks the farm with a perfect-score song at the talent show, but on the eve of the final his microphone vanishes and a cherry stem is left behind.",
-      "Part 2: Granny Corn helps Pip build a tin can microphone and he wows the final, but Celeste secretly slips a fake note into the judge's winner envelope."
-    ],
-    "cliffhanger": "Judge Pumpkin must decide whether to read Celeste's forged result out loud, as Pip and Granny Corn race to expose her before the crown is handed over.",
-    "narrator": 3
-  },
+  "series": null,
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -69,6 +32,10 @@
     {
       "title": "His Mic Was Stolen So Granny Built Him One (Part 2)",
       "premise": "The Farm VIP Star (part 2): Granny Corn helps Pip build a tin can microphone and he wows the final, but Celeste secretly slips a fake note into the judge's winner envelope."
+    },
+    {
+      "title": "The Tin Can Mic Caught the Cheater Red-Handed (Part 3)",
+      "premise": "The Farm VIP Star (part 3): Pip's tin can microphone exposes Celeste's forged winner note, she is disqualified and sent to sweep the stage, and Pip is crowned the Farm VIP Star with Granny Corn by his side."
     }
   ],
   "done_slots": [
@@ -78,6 +45,7 @@
     "2026-10-25 08:00",
     "2026-10-25 13:00",
     "2026-10-25 19:00",
-    "2026-10-26 08:00"
+    "2026-10-26 08:00",
+    "2026-10-27 08:00"
   ]
 }
