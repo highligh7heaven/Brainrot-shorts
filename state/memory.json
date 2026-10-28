@@ -1,48 +1,5 @@
 {
-  "series": {
-    "id": "20261027_2048",
-    "part": 2,
-    "total": 3,
-    "title": "The Olive Oil Inheritance",
-    "characters": [
-      {
-        "id": "mama",
-        "name": "Mama Olive",
-        "look": "A plump glossy dark green olive woman with sharp painted eyebrows, red lipstick, pearl necklace and a tight purple designer dress with a fur stole.",
-        "voice": "posh_woman"
-      },
-      {
-        "id": "gary",
-        "name": "Grape Gary",
-        "look": "A shiny round purple grape young man with a smug grin, slicked hair, sunglasses on his head, gold chains and a white tracksuit with gold sneakers.",
-        "voice": "man"
-      },
-      {
-        "id": "lucy",
-        "name": "Lime Lucy",
-        "look": "A small bright green lime girl with big hopeful eyes, freckles, a messy ponytail and a faded patched brown apron over a plain grey dress.",
-        "voice": "girl"
-      },
-      {
-        "id": "judge",
-        "name": "Judge Coconut",
-        "look": "A large hairy brown coconut man with bushy white eyebrows, round glasses and a long black judge's robe.",
-        "voice": "deep_man"
-      },
-      {
-        "id": "nonno",
-        "name": "Nonno Avocado",
-        "look": "A wrinkled old dark green avocado man with a bald round head, a big white mustache, a flat cap and a long frosty grey coat with a wooden cane.",
-        "voice": "italian_man"
-      }
-    ],
-    "so_far": [
-      "Part 1: Mama Olive sues Lime Lucy for stealing the family recipe to give Grape Gary everything, but her own recipe book proves Lucy invented it.",
-      "Part 2: Nonno Avocado reveals Grandpa's frozen will demanding a cook-off, and Gary secretly sabotages Lucy's dish with vinegar until Nonno spots a bottle in his pocket."
-    ],
-    "cliffhanger": "Gary's pockets are about to be emptied in front of the whole court, and Mama Olive will do anything to protect him.",
-    "narrator": 5
-  },
+  "series": null,
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -87,6 +44,10 @@
     {
       "title": "Grandpa Froze His Last Secret in a Jar of Oil (Part 2)",
       "premise": "The Olive Oil Inheritance (part 2): Nonno Avocado reveals Grandpa's frozen will demanding a cook-off, and Gary secretly sabotages Lucy's dish with vinegar until Nonno spots a bottle in his pocket."
+    },
+    {
+      "title": "Her Golden Son Turned On Her in Court (Part 3)",
+      "premise": "The Olive Oil Inheritance (part 3): Mama Olive takes the blame to protect Gary, but he betrays her, Nonno's saved jar proves Lucy's sauce is the true recipe, and Lucy inherits everything while Gary and Mama work in her restaurant."
     }
   ],
   "done_slots": [
@@ -99,6 +60,7 @@
     "2026-10-26 08:00",
     "2026-10-27 08:00",
     "2026-10-27 13:00",
-    "2026-10-27 19:00"
+    "2026-10-27 19:00",
+    "2026-10-28 08:00"
   ]
 }
