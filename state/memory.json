@@ -1,37 +1,5 @@
 {
-  "series": {
-    "id": "20261028_2152",
-    "part": 3,
-    "total": 4,
-    "title": "The Dwarf Planet Pea",
-    "characters": [
-      {
-        "id": "pluto",
-        "name": "Pea Pluto",
-        "look": "A tiny round bright green pea boy with big shy brown eyes, freckles, a patched blue denim jacket and little black tap shoes.",
-        "voice": "boy"
-      },
-      {
-        "id": "wanda",
-        "name": "Watermelon Wanda",
-        "look": "A tall glossy striped watermelon girl with a smug pink smile, sparkly star earrings, a glittering red sequin dress and a tiara.",
-        "voice": "posh_woman"
-      },
-      {
-        "id": "farmer",
-        "name": "Farmer Pumpkin",
-        "look": "A big round orange pumpkin man with a curly green stem on top, kind wrinkled eyes, a grey moustache, a straw hat and faded blue overalls.",
-        "voice": "old_man"
-      }
-    ],
-    "so_far": [
-      "Part 1: Mocked tiny Pea Pluto wows the farm talent show with a bucket tap dance, and when jealous Watermelon Wanda searches him, an old birth certificate in Farmer Pumpkin's handwriting falls out bearing the Pumpkin family name.",
-      "Part 2: Farmer Pumpkin's old chest reveals Pluto is his long-lost seed, but Wanda overhears, swaps the birth certificate for a fake and publicly claims to be his real child.",
-      "Part 3: Pluto finds his baby blanket hidden in Wanda's tiara box, but she locks him in the root cellar, and his desperate tap rhythm reaches the farmer just as Wanda forces his hand to sign the farm away."
-    ],
-    "cliffhanger": "With the pen already on the deed, Farmer Pumpkin must choose between Wanda's grip and the rhythm from below before the farm is lost forever.",
-    "narrator": 1
-  },
+  "series": null,
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -92,6 +60,10 @@
     {
       "title": "She Locked Him Away to Steal His Father's Farm (Part 3)",
       "premise": "The Dwarf Planet Pea (part 3): Pluto finds his baby blanket hidden in Wanda's tiara box, but she locks him in the root cellar, and his desperate tap rhythm reaches the farmer just as Wanda forces his hand to sign the farm away."
+    },
+    {
+      "title": "The Secret Song That Saved the Farm (Part 4)",
+      "premise": "The Dwarf Planet Pea (part 4): Farmer Pumpkin recognizes Pluto's lullaby tap rhythm, tears up the deed, frees his son from the cellar, exposes Wanda with the stitched baby blanket, and sends her to scrub buckets."
     }
   ],
   "done_slots": [
@@ -108,6 +80,7 @@
     "2026-10-28 08:00",
     "2026-10-28 13:00",
     "2026-10-28 19:00",
-    "2026-10-29 08:00"
+    "2026-10-29 08:00",
+    "2026-10-29 13:00"
   ]
 }
