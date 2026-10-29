@@ -1,7 +1,7 @@
 {
   "series": {
     "id": "20261028_2152",
-    "part": 1,
+    "part": 2,
     "total": 4,
     "title": "The Dwarf Planet Pea",
     "characters": [
@@ -25,9 +25,10 @@
       }
     ],
     "so_far": [
-      "Part 1: Mocked tiny Pea Pluto wows the farm talent show with a bucket tap dance, and when jealous Watermelon Wanda searches him, an old birth certificate in Farmer Pumpkin's handwriting falls out bearing the Pumpkin family name."
+      "Part 1: Mocked tiny Pea Pluto wows the farm talent show with a bucket tap dance, and when jealous Watermelon Wanda searches him, an old birth certificate in Farmer Pumpkin's handwriting falls out bearing the Pumpkin family name.",
+      "Part 2: Farmer Pumpkin's old chest reveals Pluto is his long-lost seed, but Wanda overhears, swaps the birth certificate for a fake and publicly claims to be his real child."
     ],
-    "cliffhanger": "Farmer Pumpkin must uncover why a tiny pea carries a Pumpkin birth certificate, while Wanda schemes to keep the truth buried.",
+    "cliffhanger": "With the blanket missing and a forged certificate in the farmer's hands, Pluto must prove he is the real Pumpkin child before Wanda takes the whole farm.",
     "narrator": 1
   },
   "history": [
@@ -82,6 +83,10 @@
     {
       "title": "The Tiny Pea Dropped a Paper That Shocked the Farm (Part 1)",
       "premise": "The Dwarf Planet Pea (part 1): Mocked tiny Pea Pluto wows the farm talent show with a bucket tap dance, and when jealous Watermelon Wanda searches him, an old birth certificate in Farmer Pumpkin's handwriting falls out bearing the Pumpkin family name."
+    },
+    {
+      "title": "The Lost Seed the Farmer Never Stopped Missing (Part 2)",
+      "premise": "The Dwarf Planet Pea (part 2): Farmer Pumpkin's old chest reveals Pluto is his long-lost seed, but Wanda overhears, swaps the birth certificate for a fake and publicly claims to be his real child."
     }
   ],
   "done_slots": [
@@ -96,6 +101,7 @@
     "2026-10-27 13:00",
     "2026-10-27 19:00",
     "2026-10-28 08:00",
-    "2026-10-28 13:00"
+    "2026-10-28 13:00",
+    "2026-10-28 19:00"
   ]
 }
