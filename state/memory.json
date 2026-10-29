@@ -1,7 +1,7 @@
 {
   "series": {
     "id": "20261028_2152",
-    "part": 2,
+    "part": 3,
     "total": 4,
     "title": "The Dwarf Planet Pea",
     "characters": [
@@ -26,9 +26,10 @@
     ],
     "so_far": [
       "Part 1: Mocked tiny Pea Pluto wows the farm talent show with a bucket tap dance, and when jealous Watermelon Wanda searches him, an old birth certificate in Farmer Pumpkin's handwriting falls out bearing the Pumpkin family name.",
-      "Part 2: Farmer Pumpkin's old chest reveals Pluto is his long-lost seed, but Wanda overhears, swaps the birth certificate for a fake and publicly claims to be his real child."
+      "Part 2: Farmer Pumpkin's old chest reveals Pluto is his long-lost seed, but Wanda overhears, swaps the birth certificate for a fake and publicly claims to be his real child.",
+      "Part 3: Pluto finds his baby blanket hidden in Wanda's tiara box, but she locks him in the root cellar, and his desperate tap rhythm reaches the farmer just as Wanda forces his hand to sign the farm away."
     ],
-    "cliffhanger": "With the blanket missing and a forged certificate in the farmer's hands, Pluto must prove he is the real Pumpkin child before Wanda takes the whole farm.",
+    "cliffhanger": "With the pen already on the deed, Farmer Pumpkin must choose between Wanda's grip and the rhythm from below before the farm is lost forever.",
     "narrator": 1
   },
   "history": [
@@ -87,6 +88,10 @@
     {
       "title": "The Lost Seed the Farmer Never Stopped Missing (Part 2)",
       "premise": "The Dwarf Planet Pea (part 2): Farmer Pumpkin's old chest reveals Pluto is his long-lost seed, but Wanda overhears, swaps the birth certificate for a fake and publicly claims to be his real child."
+    },
+    {
+      "title": "She Locked Him Away to Steal His Father's Farm (Part 3)",
+      "premise": "The Dwarf Planet Pea (part 3): Pluto finds his baby blanket hidden in Wanda's tiara box, but she locks him in the root cellar, and his desperate tap rhythm reaches the farmer just as Wanda forces his hand to sign the farm away."
     }
   ],
   "done_slots": [
@@ -102,6 +107,7 @@
     "2026-10-27 19:00",
     "2026-10-28 08:00",
     "2026-10-28 13:00",
-    "2026-10-28 19:00"
+    "2026-10-28 19:00",
+    "2026-10-29 08:00"
   ]
 }
