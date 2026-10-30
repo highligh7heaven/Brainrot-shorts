@@ -1,5 +1,35 @@
 {
-  "series": null,
+  "series": {
+    "id": "20261030_0208",
+    "part": 1,
+    "total": 3,
+    "title": "The Submarine Fortune",
+    "characters": [
+      {
+        "id": "narrator",
+        "name": "Narrator",
+        "look": "An unseen storyteller who never appears on screen.",
+        "voice": "deep_man"
+      },
+      {
+        "id": "kiki",
+        "name": "Kiwi Kiki",
+        "look": "A small round kiwi girl with fuzzy brown skin, bright green freckled face, big hopeful eyes, wearing faded blue overalls and muddy yellow rubber boots.",
+        "voice": "girl"
+      },
+      {
+        "id": "marvin",
+        "name": "Melon Marvin",
+        "look": "A huge smug cantaloupe man with a netted orange head, slicked-back leafy hair, a sneering grin, wearing a shiny purple suit and a gold watch.",
+        "voice": "man"
+      }
+    ],
+    "so_far": [
+      "Part 1: Kiwi Kiki inherits only a rusty submarine while Melon Marvin takes the farm, but she discovers a hidden gold fortune at the bottom of the duck pond just as Marvin starts draining it with her trapped inside."
+    ],
+    "cliffhanger": "With the pond draining fast, Kiki must escape the stranded submarine before Marvin reaches the gold, and Grandpa's clue about the ducks may be her only hope.",
+    "narrator": 1
+  },
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -64,6 +94,10 @@
     {
       "title": "The Secret Song That Saved the Farm (Part 4)",
       "premise": "The Dwarf Planet Pea (part 4): Farmer Pumpkin recognizes Pluto's lullaby tap rhythm, tears up the deed, frees his son from the cellar, exposes Wanda with the stitched baby blanket, and sends her to scrub buckets."
+    },
+    {
+      "title": "She Inherited a Rusty Submarine and Everyone Laughed (Part 1)",
+      "premise": "The Submarine Fortune (part 1): Kiwi Kiki inherits only a rusty submarine while Melon Marvin takes the farm, but she discovers a hidden gold fortune at the bottom of the duck pond just as Marvin starts draining it with her trapped inside."
     }
   ],
   "done_slots": [
@@ -81,6 +115,7 @@
     "2026-10-28 13:00",
     "2026-10-28 19:00",
     "2026-10-29 08:00",
-    "2026-10-29 13:00"
+    "2026-10-29 13:00",
+    "2026-10-29 19:00"
   ]
 }
