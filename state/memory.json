@@ -1,36 +1,5 @@
 {
-  "series": {
-    "id": "20261030_0208",
-    "part": 2,
-    "total": 3,
-    "title": "The Submarine Fortune",
-    "characters": [
-      {
-        "id": "narrator",
-        "name": "Narrator",
-        "look": "An unseen storyteller who never appears on screen.",
-        "voice": "deep_man"
-      },
-      {
-        "id": "kiki",
-        "name": "Kiwi Kiki",
-        "look": "A small round kiwi girl with fuzzy brown skin, bright green freckled face, big hopeful eyes, wearing faded blue overalls and muddy yellow rubber boots.",
-        "voice": "girl"
-      },
-      {
-        "id": "marvin",
-        "name": "Melon Marvin",
-        "look": "A huge smug cantaloupe man with a netted orange head, slicked-back leafy hair, a sneering grin, wearing a shiny purple suit and a gold watch.",
-        "voice": "man"
-      }
-    ],
-    "so_far": [
-      "Part 1: Kiwi Kiki inherits only a rusty submarine while Melon Marvin takes the farm, but she discovers a hidden gold fortune at the bottom of the duck pond just as Marvin starts draining it with her trapped inside.",
-      "Part 2: Kiki follows Grandpa's duck clue through a hidden pipe to a secret barn cellar holding the real gold and his true will, while Marvin finds only rocks and traps her inside."
-    ],
-    "cliffhanger": "Locked in the cellar with the gold and the will, Kiki must find a way out before Marvin claims the farm forever.",
-    "narrator": 1
-  },
+  "series": null,
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -103,6 +72,10 @@
     {
       "title": "Buried in Mud, She Follows the Ducks to a Secret (Part 2)",
       "premise": "The Submarine Fortune (part 2): Kiki follows Grandpa's duck clue through a hidden pipe to a secret barn cellar holding the real gold and his true will, while Marvin finds only rocks and traps her inside."
+    },
+    {
+      "title": "She Rolled Grandpa's Submarine Right Into His Signing (Part 3)",
+      "premise": "The Submarine Fortune (part 3): Kiki escapes through the pipe, drives Grandpa's secret tank-track submarine into Marvin's deed signing, proves his will is fake, and wins the farm and gold while Marvin is stuck scrubbing the duck pond."
     }
   ],
   "done_slots": [
@@ -122,6 +95,7 @@
     "2026-10-29 08:00",
     "2026-10-29 13:00",
     "2026-10-29 19:00",
-    "2026-10-30 08:00"
+    "2026-10-30 08:00",
+    "2026-10-30 13:00"
   ]
 }
