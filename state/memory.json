@@ -1,7 +1,7 @@
 {
   "series": {
     "id": "20261030_0208",
-    "part": 1,
+    "part": 2,
     "total": 3,
     "title": "The Submarine Fortune",
     "characters": [
@@ -25,9 +25,10 @@
       }
     ],
     "so_far": [
-      "Part 1: Kiwi Kiki inherits only a rusty submarine while Melon Marvin takes the farm, but she discovers a hidden gold fortune at the bottom of the duck pond just as Marvin starts draining it with her trapped inside."
+      "Part 1: Kiwi Kiki inherits only a rusty submarine while Melon Marvin takes the farm, but she discovers a hidden gold fortune at the bottom of the duck pond just as Marvin starts draining it with her trapped inside.",
+      "Part 2: Kiki follows Grandpa's duck clue through a hidden pipe to a secret barn cellar holding the real gold and his true will, while Marvin finds only rocks and traps her inside."
     ],
-    "cliffhanger": "With the pond draining fast, Kiki must escape the stranded submarine before Marvin reaches the gold, and Grandpa's clue about the ducks may be her only hope.",
+    "cliffhanger": "Locked in the cellar with the gold and the will, Kiki must find a way out before Marvin claims the farm forever.",
     "narrator": 1
   },
   "history": [
@@ -98,6 +99,10 @@
     {
       "title": "She Inherited a Rusty Submarine and Everyone Laughed (Part 1)",
       "premise": "The Submarine Fortune (part 1): Kiwi Kiki inherits only a rusty submarine while Melon Marvin takes the farm, but she discovers a hidden gold fortune at the bottom of the duck pond just as Marvin starts draining it with her trapped inside."
+    },
+    {
+      "title": "Buried in Mud, She Follows the Ducks to a Secret (Part 2)",
+      "premise": "The Submarine Fortune (part 2): Kiki follows Grandpa's duck clue through a hidden pipe to a secret barn cellar holding the real gold and his true will, while Marvin finds only rocks and traps her inside."
     }
   ],
   "done_slots": [
@@ -116,6 +121,7 @@
     "2026-10-28 19:00",
     "2026-10-29 08:00",
     "2026-10-29 13:00",
-    "2026-10-29 19:00"
+    "2026-10-29 19:00",
+    "2026-10-30 08:00"
   ]
 }
