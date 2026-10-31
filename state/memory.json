@@ -1,7 +1,7 @@
 {
   "series": {
     "id": "20261031_0257",
-    "part": 1,
+    "part": 2,
     "total": 3,
     "title": "The Sunset Talent Show",
     "characters": [
@@ -22,12 +22,19 @@
         "name": "Mr Grapefruit",
         "look": "A large wrinkled pink grapefruit man with a thick grey moustache and narrow angry eyes, wearing a white linen suit, a gold chain and a straw hat.",
         "voice": "deep_man"
+      },
+      {
+        "id": "papaya",
+        "name": "Granny Papaya",
+        "look": "A small wrinkled orange papaya grandmother with kind twinkling eyes and round glasses, wearing a faded red lifeguard swimsuit, a white sun visor and a whistle on a cord.",
+        "voice": "old_woman"
       }
     ],
     "so_far": [
-      "Part 1: Mocked towel boy Mango Milo wins the beach talent show with a perfect coconut trick shot, and when Gloria demands his papers, an old resort deed with the Mango name falls out."
+      "Part 1: Mocked towel boy Mango Milo wins the beach talent show with a perfect coconut trick shot, and when Gloria demands his papers, an old resort deed with the Mango name falls out.",
+      "Part 2: Granny Papaya reveals Milo's grandpa built the resort, but Gloria spots where Milo hid the deed and Mr Grapefruit dumps the coconut into the sea."
     ],
-    "cliffhanger": "Milo digs into who the Mango on the deed really was, while Mr Grapefruit secretly plots to make the paper disappear before the final.",
+    "cliffhanger": "With the final starting at sunrise, Milo must get the drifting coconut back even though he cannot swim.",
     "narrator": 6
   },
   "history": [
@@ -110,6 +117,10 @@
     {
       "title": "The Towel Boy Who Stunned the Whole Beach (Part 1)",
       "premise": "The Sunset Talent Show (part 1): Mocked towel boy Mango Milo wins the beach talent show with a perfect coconut trick shot, and when Gloria demands his papers, an old resort deed with the Mango name falls out."
+    },
+    {
+      "title": "The Coconut Hiding His Grandpa's Secret (Part 2)",
+      "premise": "The Sunset Talent Show (part 2): Granny Papaya reveals Milo's grandpa built the resort, but Gloria spots where Milo hid the deed and Mr Grapefruit dumps the coconut into the sea."
     }
   ],
   "done_slots": [
@@ -131,6 +142,7 @@
     "2026-10-29 19:00",
     "2026-10-30 08:00",
     "2026-10-30 13:00",
-    "2026-10-30 19:00"
+    "2026-10-30 19:00",
+    "2026-10-31 08:00"
   ]
 }
