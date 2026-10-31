@@ -1,5 +1,35 @@
 {
-  "series": null,
+  "series": {
+    "id": "20261031_0257",
+    "part": 1,
+    "total": 3,
+    "title": "The Sunset Talent Show",
+    "characters": [
+      {
+        "id": "milo",
+        "name": "Mango Milo",
+        "look": "A young golden-orange mango boy with a small green leaf on top, big hopeful brown eyes, and a shy smile, wearing a white resort staff polo, blue shorts and a towel over his shoulder.",
+        "voice": "boy"
+      },
+      {
+        "id": "gloria",
+        "name": "Grapefruit Gloria",
+        "look": "A glossy pink grapefruit young woman with sparkly eyelashes and a smug smirk, wearing a sequined gold gown, a flower crown and big sunglasses.",
+        "voice": "posh_woman"
+      },
+      {
+        "id": "grant",
+        "name": "Mr Grapefruit",
+        "look": "A large wrinkled pink grapefruit man with a thick grey moustache and narrow angry eyes, wearing a white linen suit, a gold chain and a straw hat.",
+        "voice": "deep_man"
+      }
+    ],
+    "so_far": [
+      "Part 1: Mocked towel boy Mango Milo wins the beach talent show with a perfect coconut trick shot, and when Gloria demands his papers, an old resort deed with the Mango name falls out."
+    ],
+    "cliffhanger": "Milo digs into who the Mango on the deed really was, while Mr Grapefruit secretly plots to make the paper disappear before the final.",
+    "narrator": 6
+  },
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -76,6 +106,10 @@
     {
       "title": "She Rolled Grandpa's Submarine Right Into His Signing (Part 3)",
       "premise": "The Submarine Fortune (part 3): Kiki escapes through the pipe, drives Grandpa's secret tank-track submarine into Marvin's deed signing, proves his will is fake, and wins the farm and gold while Marvin is stuck scrubbing the duck pond."
+    },
+    {
+      "title": "The Towel Boy Who Stunned the Whole Beach (Part 1)",
+      "premise": "The Sunset Talent Show (part 1): Mocked towel boy Mango Milo wins the beach talent show with a perfect coconut trick shot, and when Gloria demands his papers, an old resort deed with the Mango name falls out."
     }
   ],
   "done_slots": [
@@ -96,6 +130,7 @@
     "2026-10-29 13:00",
     "2026-10-29 19:00",
     "2026-10-30 08:00",
-    "2026-10-30 13:00"
+    "2026-10-30 13:00",
+    "2026-10-30 19:00"
   ]
 }
