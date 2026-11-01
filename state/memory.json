@@ -1,5 +1,41 @@
 {
-  "series": null,
+  "series": {
+    "id": "20261101_0400",
+    "part": 1,
+    "total": 3,
+    "title": "The Billionaire in the Hay Barn",
+    "characters": [
+      {
+        "id": "narrator",
+        "name": "Narrator",
+        "look": "Never shown on screen, only heard.",
+        "voice": "man"
+      },
+      {
+        "id": "penny",
+        "name": "Peach Penny",
+        "look": "A soft round peach head with rosy fuzzy cheeks, big kind brown eyes and a tiny green leaf on top, wearing patched blue overalls, a faded yellow coat and muddy rubber boots.",
+        "voice": "woman"
+      },
+      {
+        "id": "rita",
+        "name": "Radish Rita",
+        "look": "A shiny magenta radish head with a tall spiky green leaf hairdo, sharp narrow eyes and glossy pink lips, wearing a white designer riding jacket, pearl necklace and spotless white boots.",
+        "voice": "posh_woman"
+      },
+      {
+        "id": "percy",
+        "name": "Pomegranate Percy",
+        "look": "A big deep-red pomegranate head with a little crown-shaped top, a bushy white beard and twinkling wise eyes, first wearing torn muddy rags and later a sparkling diamond-studded white suit.",
+        "voice": "old_man"
+      }
+    ],
+    "so_far": [
+      "Part 1: Kind Peach Penny feeds and shelters a muddy stranger who turns out to be billionaire Pomegranate Percy, but Radish Rita pushes her in the mud, claims the credit and gets her fired."
+    ],
+    "cliffhanger": "Penny remembers the little recorder hidden in her coat pocket, but Rita is about to find it first.",
+    "narrator": 3
+  },
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -88,10 +124,13 @@
     {
       "title": "He Can't Swim but His Grandpa's Deed Is Drifting Away (Part 3)",
       "premise": "The Sunset Talent Show (part 3): Granny Papaya paddles Milo out to rescue the coconut holding the deed, he wins the final with a perfect trick shot, proves he owns the resort, and the Grapefruits end up folding his towels."
+    },
+    {
+      "title": "She Gave a Muddy Stranger Her Only Lunch (Part 1)",
+      "premise": "The Billionaire in the Hay Barn (part 1): Kind Peach Penny feeds and shelters a muddy stranger who turns out to be billionaire Pomegranate Percy, but Radish Rita pushes her in the mud, claims the credit and gets her fired."
     }
   ],
   "done_slots": [
-    "2026-10-24 13:00",
     "2026-10-24 19:00",
     "2026-10-25 08:00",
     "2026-10-25 13:00",
@@ -110,6 +149,7 @@
     "2026-10-30 13:00",
     "2026-10-30 19:00",
     "2026-10-31 08:00",
-    "2026-10-31 13:00"
+    "2026-10-31 13:00",
+    "2026-10-31 19:00"
   ]
 }
