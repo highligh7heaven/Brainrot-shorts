@@ -1,42 +1,5 @@
 {
-  "series": {
-    "id": "20261101_0400",
-    "part": 2,
-    "total": 3,
-    "title": "The Billionaire in the Hay Barn",
-    "characters": [
-      {
-        "id": "narrator",
-        "name": "Narrator",
-        "look": "Never shown on screen, only heard.",
-        "voice": "man"
-      },
-      {
-        "id": "penny",
-        "name": "Peach Penny",
-        "look": "A soft round peach head with rosy fuzzy cheeks, big kind brown eyes and a tiny green leaf on top, wearing patched blue overalls, a faded yellow coat and muddy rubber boots.",
-        "voice": "woman"
-      },
-      {
-        "id": "rita",
-        "name": "Radish Rita",
-        "look": "A shiny magenta radish head with a tall spiky green leaf hairdo, sharp narrow eyes and glossy pink lips, wearing a white designer riding jacket, pearl necklace and spotless white boots.",
-        "voice": "posh_woman"
-      },
-      {
-        "id": "percy",
-        "name": "Pomegranate Percy",
-        "look": "A big deep-red pomegranate head with a little crown-shaped top, a bushy white beard and twinkling wise eyes, first wearing torn muddy rags and later a sparkling diamond-studded white suit.",
-        "voice": "old_man"
-      }
-    ],
-    "so_far": [
-      "Part 1: Kind Peach Penny feeds and shelters a muddy stranger who turns out to be billionaire Pomegranate Percy, but Radish Rita pushes her in the mud, claims the credit and gets her fired.",
-      "Part 2: Rita throws Penny's recorder into the duck pond, Penny rescues it after a freezing night, and when she confronts Rita at Percy's golden gala the guards drag her away just as the recorder clicks on."
-    ],
-    "cliffhanger": "The soaked recorder starts playing in front of the whole gala, and Rita will do anything to stop Percy from hearing it.",
-    "narrator": 3
-  },
+  "series": null,
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -133,10 +96,13 @@
     {
       "title": "She Threw the Only Proof Into the Pond (Part 2)",
       "premise": "The Billionaire in the Hay Barn (part 2): Rita throws Penny's recorder into the duck pond, Penny rescues it after a freezing night, and when she confronts Rita at Percy's golden gala the guards drag her away just as the recorder clicks on."
+    },
+    {
+      "title": "The Recorder Finally Spoke and Rita Lost Everything (Part 3)",
+      "premise": "The Billionaire in the Hay Barn (part 3): The recorder exposes Rita in front of the gala, she slides into the chocolate fountain trying to stop it, and Percy frees Penny, gives her the farm and sends Rita to sweep the hay barn."
     }
   ],
   "done_slots": [
-    "2026-10-25 08:00",
     "2026-10-25 13:00",
     "2026-10-25 19:00",
     "2026-10-26 08:00",
@@ -155,6 +121,7 @@
     "2026-10-31 08:00",
     "2026-10-31 13:00",
     "2026-10-31 19:00",
-    "2026-11-01 08:00"
+    "2026-11-01 08:00",
+    "2026-11-01 13:00"
   ]
 }
