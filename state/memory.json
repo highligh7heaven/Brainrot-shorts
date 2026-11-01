@@ -1,7 +1,7 @@
 {
   "series": {
     "id": "20261101_0400",
-    "part": 1,
+    "part": 2,
     "total": 3,
     "title": "The Billionaire in the Hay Barn",
     "characters": [
@@ -31,9 +31,10 @@
       }
     ],
     "so_far": [
-      "Part 1: Kind Peach Penny feeds and shelters a muddy stranger who turns out to be billionaire Pomegranate Percy, but Radish Rita pushes her in the mud, claims the credit and gets her fired."
+      "Part 1: Kind Peach Penny feeds and shelters a muddy stranger who turns out to be billionaire Pomegranate Percy, but Radish Rita pushes her in the mud, claims the credit and gets her fired.",
+      "Part 2: Rita throws Penny's recorder into the duck pond, Penny rescues it after a freezing night, and when she confronts Rita at Percy's golden gala the guards drag her away just as the recorder clicks on."
     ],
-    "cliffhanger": "Penny remembers the little recorder hidden in her coat pocket, but Rita is about to find it first.",
+    "cliffhanger": "The soaked recorder starts playing in front of the whole gala, and Rita will do anything to stop Percy from hearing it.",
     "narrator": 3
   },
   "history": [
@@ -128,10 +129,13 @@
     {
       "title": "She Gave a Muddy Stranger Her Only Lunch (Part 1)",
       "premise": "The Billionaire in the Hay Barn (part 1): Kind Peach Penny feeds and shelters a muddy stranger who turns out to be billionaire Pomegranate Percy, but Radish Rita pushes her in the mud, claims the credit and gets her fired."
+    },
+    {
+      "title": "She Threw the Only Proof Into the Pond (Part 2)",
+      "premise": "The Billionaire in the Hay Barn (part 2): Rita throws Penny's recorder into the duck pond, Penny rescues it after a freezing night, and when she confronts Rita at Percy's golden gala the guards drag her away just as the recorder clicks on."
     }
   ],
   "done_slots": [
-    "2026-10-24 19:00",
     "2026-10-25 08:00",
     "2026-10-25 13:00",
     "2026-10-25 19:00",
@@ -150,6 +154,7 @@
     "2026-10-30 19:00",
     "2026-10-31 08:00",
     "2026-10-31 13:00",
-    "2026-10-31 19:00"
+    "2026-10-31 19:00",
+    "2026-11-01 08:00"
   ]
 }
