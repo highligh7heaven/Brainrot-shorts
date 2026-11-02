@@ -1,7 +1,7 @@
 {
   "series": {
     "id": "20261102_0300",
-    "part": 1,
+    "part": 2,
     "total": 3,
     "title": "The Midnight Chauffeur",
     "characters": [
@@ -31,9 +31,10 @@
       }
     ],
     "so_far": [
-      "Part 1: Quiet chauffeur Cucumber Cole wins the Midnight Drive-In Talent Show after Stella's voice cracks, so she fires him and leaves him on a dark road, where a golden limousine arrives to pick him up."
+      "Part 1: Quiet chauffeur Cucumber Cole wins the Midnight Drive-In Talent Show after Stella's voice cracks, so she fires him and leaves him on a dark road, where a golden limousine arrives to pick him up.",
+      "Part 2: Butler Fig reveals Cole secretly owns the Midnight Drive-In and was testing Stella's heart, but after her fake apology fails she steals his golden contract and limousine."
     ],
-    "cliffhanger": "Next, Stella discovers who owns the golden limousine and why her quiet chauffeur was driving her at all.",
+    "cliffhanger": "Next, Cole chases Stella through the night to win back his contract, and karma finally catches up with her.",
     "narrator": 2
   },
   "history": [
@@ -140,10 +141,13 @@
     {
       "title": "She Mocked Her Quiet Chauffeur Until He Sang (Part 1)",
       "premise": "The Midnight Chauffeur (part 1): Quiet chauffeur Cucumber Cole wins the Midnight Drive-In Talent Show after Stella's voice cracks, so she fires him and leaves him on a dark road, where a golden limousine arrives to pick him up."
+    },
+    {
+      "title": "Her Fired Chauffeur Owned Everything (Part 2)",
+      "premise": "The Midnight Chauffeur (part 2): Butler Fig reveals Cole secretly owns the Midnight Drive-In and was testing Stella's heart, but after her fake apology fails she steals his golden contract and limousine."
     }
   ],
   "done_slots": [
-    "2026-10-25 19:00",
     "2026-10-26 08:00",
     "2026-10-27 08:00",
     "2026-10-27 13:00",
@@ -162,6 +166,7 @@
     "2026-10-31 19:00",
     "2026-11-01 08:00",
     "2026-11-01 13:00",
-    "2026-11-01 19:00"
+    "2026-11-01 19:00",
+    "2026-11-02 08:00"
   ]
 }
