@@ -1,5 +1,41 @@
 {
-  "series": null,
+  "series": {
+    "id": "20261102_0300",
+    "part": 1,
+    "total": 3,
+    "title": "The Midnight Chauffeur",
+    "characters": [
+      {
+        "id": "cole",
+        "name": "Cucumber Cole",
+        "look": "A tall slim green cucumber man with gentle dark eyes and a shy smile, wearing a neat black chauffeur suit, white gloves and a black cap.",
+        "voice": "man"
+      },
+      {
+        "id": "stella",
+        "name": "Strawberry Stella",
+        "look": "A glossy red strawberry woman with a leafy green crown styled like a tiara, long lashes and a smug pout, wearing a sparkly pink gown and diamond earrings.",
+        "voice": "posh_woman"
+      },
+      {
+        "id": "coconut",
+        "name": "Mr Coconut",
+        "look": "A round hairy brown coconut man with a big white grin and bushy eyebrows, wearing a shiny gold tuxedo and holding a microphone.",
+        "voice": "deep_man"
+      },
+      {
+        "id": "fig",
+        "name": "Butler Fig",
+        "look": "A small purple fig man with a neat grey mustache and calm eyes, wearing a crisp white butler uniform with golden buttons and white gloves.",
+        "voice": "old_man"
+      }
+    ],
+    "so_far": [
+      "Part 1: Quiet chauffeur Cucumber Cole wins the Midnight Drive-In Talent Show after Stella's voice cracks, so she fires him and leaves him on a dark road, where a golden limousine arrives to pick him up."
+    ],
+    "cliffhanger": "Next, Stella discovers who owns the golden limousine and why her quiet chauffeur was driving her at all.",
+    "narrator": 2
+  },
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -100,10 +136,13 @@
     {
       "title": "The Recorder Finally Spoke and Rita Lost Everything (Part 3)",
       "premise": "The Billionaire in the Hay Barn (part 3): The recorder exposes Rita in front of the gala, she slides into the chocolate fountain trying to stop it, and Percy frees Penny, gives her the farm and sends Rita to sweep the hay barn."
+    },
+    {
+      "title": "She Mocked Her Quiet Chauffeur Until He Sang (Part 1)",
+      "premise": "The Midnight Chauffeur (part 1): Quiet chauffeur Cucumber Cole wins the Midnight Drive-In Talent Show after Stella's voice cracks, so she fires him and leaves him on a dark road, where a golden limousine arrives to pick him up."
     }
   ],
   "done_slots": [
-    "2026-10-25 13:00",
     "2026-10-25 19:00",
     "2026-10-26 08:00",
     "2026-10-27 08:00",
@@ -122,6 +161,7 @@
     "2026-10-31 13:00",
     "2026-10-31 19:00",
     "2026-11-01 08:00",
-    "2026-11-01 13:00"
+    "2026-11-01 13:00",
+    "2026-11-01 19:00"
   ]
 }
