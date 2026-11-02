@@ -1,42 +1,5 @@
 {
-  "series": {
-    "id": "20261102_0300",
-    "part": 2,
-    "total": 3,
-    "title": "The Midnight Chauffeur",
-    "characters": [
-      {
-        "id": "cole",
-        "name": "Cucumber Cole",
-        "look": "A tall slim green cucumber man with gentle dark eyes and a shy smile, wearing a neat black chauffeur suit, white gloves and a black cap.",
-        "voice": "man"
-      },
-      {
-        "id": "stella",
-        "name": "Strawberry Stella",
-        "look": "A glossy red strawberry woman with a leafy green crown styled like a tiara, long lashes and a smug pout, wearing a sparkly pink gown and diamond earrings.",
-        "voice": "posh_woman"
-      },
-      {
-        "id": "coconut",
-        "name": "Mr Coconut",
-        "look": "A round hairy brown coconut man with a big white grin and bushy eyebrows, wearing a shiny gold tuxedo and holding a microphone.",
-        "voice": "deep_man"
-      },
-      {
-        "id": "fig",
-        "name": "Butler Fig",
-        "look": "A small purple fig man with a neat grey mustache and calm eyes, wearing a crisp white butler uniform with golden buttons and white gloves.",
-        "voice": "old_man"
-      }
-    ],
-    "so_far": [
-      "Part 1: Quiet chauffeur Cucumber Cole wins the Midnight Drive-In Talent Show after Stella's voice cracks, so she fires him and leaves him on a dark road, where a golden limousine arrives to pick him up.",
-      "Part 2: Butler Fig reveals Cole secretly owns the Midnight Drive-In and was testing Stella's heart, but after her fake apology fails she steals his golden contract and limousine."
-    ],
-    "cliffhanger": "Next, Cole chases Stella through the night to win back his contract, and karma finally catches up with her.",
-    "narrator": 2
-  },
+  "series": null,
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -145,10 +108,13 @@
     {
       "title": "Her Fired Chauffeur Owned Everything (Part 2)",
       "premise": "The Midnight Chauffeur (part 2): Butler Fig reveals Cole secretly owns the Midnight Drive-In and was testing Stella's heart, but after her fake apology fails she steals his golden contract and limousine."
+    },
+    {
+      "title": "She Stole His Golden Contract, Then the Screen Lit Up (Part 3)",
+      "premise": "The Midnight Chauffeur (part 3): Cole and Butler Fig chase Stella to the drive-in, where the contract and security footage prove Cole is the owner, and Stella slips into a butter bucket and ends up parking cars."
     }
   ],
   "done_slots": [
-    "2026-10-26 08:00",
     "2026-10-27 08:00",
     "2026-10-27 13:00",
     "2026-10-27 19:00",
@@ -167,6 +133,7 @@
     "2026-11-01 08:00",
     "2026-11-01 13:00",
     "2026-11-01 19:00",
-    "2026-11-02 08:00"
+    "2026-11-02 08:00",
+    "2026-11-02 13:00"
   ]
 }
