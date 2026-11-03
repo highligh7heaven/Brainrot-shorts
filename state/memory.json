@@ -1,5 +1,35 @@
 {
-  "series": null,
+  "series": {
+    "id": "20261103_0402",
+    "part": 1,
+    "total": 4,
+    "title": "The Heart Coin Classroom",
+    "characters": [
+      {
+        "id": "duke",
+        "name": "Headmaster Durian Duke",
+        "look": "A huge spiky green durian head with a sly grin, thick eyebrows and a tiny gold monocle, round body in a shiny purple suit with a gold coin tie pin.",
+        "voice": "deep_man"
+      },
+      {
+        "id": "bea",
+        "name": "Miss Blueberry Bea",
+        "look": "A round glossy blueberry head with big kind eyes, small round glasses and a leafy bun, slim body in a soft yellow cardigan and long blue skirt.",
+        "voice": "woman"
+      },
+      {
+        "id": "chloe",
+        "name": "Cherry Chloe",
+        "look": "A small shiny red cherry head with a curly green stem ponytail, freckles and huge brown eyes, tiny body in a white school shirt and red pinafore.",
+        "voice": "girl"
+      }
+    ],
+    "so_far": [
+      "Part 1: Greedy Durian Duke frames Miss Blueberry Bea by planting fee jar coins in her desk, but Cherry Chloe finds her own heart-painted coin among them, proving it came from Duke."
+    ],
+    "cliffhanger": "Duke tries to snatch Chloe's heart coin before anyone realizes what it proves, and Chloe must decide who to trust.",
+    "narrator": 4
+  },
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -112,10 +142,13 @@
     {
       "title": "She Stole His Golden Contract, Then the Screen Lit Up (Part 3)",
       "premise": "The Midnight Chauffeur (part 3): Cole and Butler Fig chase Stella to the drive-in, where the contract and security footage prove Cole is the owner, and Stella slips into a butter bucket and ends up parking cars."
+    },
+    {
+      "title": "The Greedy Headmaster Framed the Kindest Teacher (Part 1)",
+      "premise": "The Heart Coin Classroom (part 1): Greedy Durian Duke frames Miss Blueberry Bea by planting fee jar coins in her desk, but Cherry Chloe finds her own heart-painted coin among them, proving it came from Duke."
     }
   ],
   "done_slots": [
-    "2026-10-27 08:00",
     "2026-10-27 13:00",
     "2026-10-27 19:00",
     "2026-10-28 08:00",
@@ -134,6 +167,7 @@
     "2026-11-01 13:00",
     "2026-11-01 19:00",
     "2026-11-02 08:00",
-    "2026-11-02 13:00"
+    "2026-11-02 13:00",
+    "2026-11-02 19:00"
   ]
 }
