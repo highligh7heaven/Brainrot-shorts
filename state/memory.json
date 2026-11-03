@@ -1,7 +1,7 @@
 {
   "series": {
     "id": "20261103_0402",
-    "part": 1,
+    "part": 2,
     "total": 4,
     "title": "The Heart Coin Classroom",
     "characters": [
@@ -25,9 +25,10 @@
       }
     ],
     "so_far": [
-      "Part 1: Greedy Durian Duke frames Miss Blueberry Bea by planting fee jar coins in her desk, but Cherry Chloe finds her own heart-painted coin among them, proving it came from Duke."
+      "Part 1: Greedy Durian Duke frames Miss Blueberry Bea by planting fee jar coins in her desk, but Cherry Chloe finds her own heart-painted coin among them, proving it came from Duke.",
+      "Part 2: Duke steals Chloe's heart coin and fires Miss Bea, but Chloe sneaks into his office and finds a hidden safe full of fee jar coins just as Duke locks her inside."
     ],
-    "cliffhanger": "Duke tries to snatch Chloe's heart coin before anyone realizes what it proves, and Chloe must decide who to trust.",
+    "cliffhanger": "Trapped in the dark office with Duke, Chloe must find a way to escape with the heart coin before Miss Bea leaves forever.",
     "narrator": 4
   },
   "history": [
@@ -146,10 +147,13 @@
     {
       "title": "The Greedy Headmaster Framed the Kindest Teacher (Part 1)",
       "premise": "The Heart Coin Classroom (part 1): Greedy Durian Duke frames Miss Blueberry Bea by planting fee jar coins in her desk, but Cherry Chloe finds her own heart-painted coin among them, proving it came from Duke."
+    },
+    {
+      "title": "She Broke Into the Headmaster's Office at Night (Part 2)",
+      "premise": "The Heart Coin Classroom (part 2): Duke steals Chloe's heart coin and fires Miss Bea, but Chloe sneaks into his office and finds a hidden safe full of fee jar coins just as Duke locks her inside."
     }
   ],
   "done_slots": [
-    "2026-10-27 13:00",
     "2026-10-27 19:00",
     "2026-10-28 08:00",
     "2026-10-28 13:00",
@@ -168,6 +172,7 @@
     "2026-11-01 19:00",
     "2026-11-02 08:00",
     "2026-11-02 13:00",
-    "2026-11-02 19:00"
+    "2026-11-02 19:00",
+    "2026-11-03 08:00"
   ]
 }
