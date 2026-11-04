@@ -1,37 +1,5 @@
 {
-  "series": {
-    "id": "20261103_0402",
-    "part": 3,
-    "total": 4,
-    "title": "The Heart Coin Classroom",
-    "characters": [
-      {
-        "id": "duke",
-        "name": "Headmaster Durian Duke",
-        "look": "A huge spiky green durian head with a sly grin, thick eyebrows and a tiny gold monocle, round body in a shiny purple suit with a gold coin tie pin.",
-        "voice": "deep_man"
-      },
-      {
-        "id": "bea",
-        "name": "Miss Blueberry Bea",
-        "look": "A round glossy blueberry head with big kind eyes, small round glasses and a leafy bun, slim body in a soft yellow cardigan and long blue skirt.",
-        "voice": "woman"
-      },
-      {
-        "id": "chloe",
-        "name": "Cherry Chloe",
-        "look": "A small shiny red cherry head with a curly green stem ponytail, freckles and huge brown eyes, tiny body in a white school shirt and red pinafore.",
-        "voice": "girl"
-      }
-    ],
-    "so_far": [
-      "Part 1: Greedy Durian Duke frames Miss Blueberry Bea by planting fee jar coins in her desk, but Cherry Chloe finds her own heart-painted coin among them, proving it came from Duke.",
-      "Part 2: Duke steals Chloe's heart coin and fires Miss Bea, but Chloe sneaks into his office and finds a hidden safe full of fee jar coins just as Duke locks her inside.",
-      "Part 3: Chloe escapes the locked office through an air vent with her heart coin and stops Miss Bea from leaving, but Duke empties the safe and stands before all the parents ready to name a thief."
-    ],
-    "cliffhanger": "In front of every parent, Duke accuses Chloe and Miss Bea of stealing the fee jar coins, and they must prove where the money really went.",
-    "narrator": 4
-  },
+  "series": null,
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -156,10 +124,13 @@
     {
       "title": "She Crawled Through the Walls to Save Her Teacher (Part 3)",
       "premise": "The Heart Coin Classroom (part 3): Chloe escapes the locked office through an air vent with her heart coin and stops Miss Bea from leaving, but Duke empties the safe and stands before all the parents ready to name a thief."
+    },
+    {
+      "title": "Her Tiny Secret Exposed the Greedy Headmaster (Part 4)",
+      "premise": "The Heart Coin Classroom (part 4): Chloe reveals she painted hearts on every coin in Duke's safe, the glitter on his suit and the coins spilling from his pockets expose him, and Duke is fired to scrub desks while Miss Bea becomes headmistress."
     }
   ],
   "done_slots": [
-    "2026-10-28 08:00",
     "2026-10-28 13:00",
     "2026-10-28 19:00",
     "2026-10-29 08:00",
@@ -178,6 +149,7 @@
     "2026-11-02 13:00",
     "2026-11-02 19:00",
     "2026-11-03 08:00",
-    "2026-11-03 13:00"
+    "2026-11-03 13:00",
+    "2026-11-03 19:00"
   ]
 }
