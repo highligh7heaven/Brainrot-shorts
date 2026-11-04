@@ -1,7 +1,7 @@
 {
   "series": {
     "id": "20261104_1502",
-    "part": 1,
+    "part": 2,
     "total": 4,
     "title": "The Silent Heiress",
     "characters": [
@@ -31,9 +31,10 @@
       }
     ],
     "so_far": [
-      "Part 1: Coconut Courtney trips Lychee Lily at the school race and her dad banishes Lily to a hospital storage room, but Nurse Bonnie notices Lily's bracelet bears the same crest as the hospital itself."
+      "Part 1: Coconut Courtney trips Lychee Lily at the school race and her dad banishes Lily to a hospital storage room, but Nurse Bonnie notices Lily's bracelet bears the same crest as the hospital itself.",
+      "Part 2: Nurse Bonnie discovers Lily's bracelet matches the hospital founder's, but Courtney steals it and frames Lily as a thief, and Mr Coconut turns pale when he sees the founder's portrait."
     ],
-    "cliffhanger": "Nurse Bonnie digs into the mystery crest while Courtney plots to get Lily kicked out of the hospital and the school for good.",
+    "cliffhanger": "Mr Coconut's dark secret about Lily's family is about to surface as he tries to throw her out before anyone else learns the truth.",
     "narrator": 2
   },
   "history": [
@@ -168,10 +169,13 @@
     {
       "title": "She Tripped the Quiet Girl and Laughed (Part 1)",
       "premise": "The Silent Heiress (part 1): Coconut Courtney trips Lychee Lily at the school race and her dad banishes Lily to a hospital storage room, but Nurse Bonnie notices Lily's bracelet bears the same crest as the hospital itself."
+    },
+    {
+      "title": "The Bracelet That Could Change Everything (Part 2)",
+      "premise": "The Silent Heiress (part 2): Nurse Bonnie discovers Lily's bracelet matches the hospital founder's, but Courtney steals it and frames Lily as a thief, and Mr Coconut turns pale when he sees the founder's portrait."
     }
   ],
   "done_slots": [
-    "2026-10-28 19:00",
     "2026-10-29 08:00",
     "2026-10-29 13:00",
     "2026-10-29 19:00",
@@ -190,6 +194,7 @@
     "2026-11-03 08:00",
     "2026-11-03 13:00",
     "2026-11-03 19:00",
-    "2026-11-04 08:00"
+    "2026-11-04 08:00",
+    "2026-11-04 13:00"
   ]
 }
