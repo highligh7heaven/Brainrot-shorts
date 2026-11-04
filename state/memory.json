@@ -1,5 +1,41 @@
 {
-  "series": null,
+  "series": {
+    "id": "20261104_1502",
+    "part": 1,
+    "total": 4,
+    "title": "The Silent Heiress",
+    "characters": [
+      {
+        "id": "lily",
+        "name": "Lychee Lily",
+        "look": "A small lychee girl with a bumpy pinkish-red head, big shy brown eyes and a soft smile, wearing a faded blue school tracksuit and a thin old silver bracelet.",
+        "voice": "girl"
+      },
+      {
+        "id": "courtney",
+        "name": "Coconut Courtney",
+        "look": "A tall coconut girl with a glossy brown hairy shell head, sharp eyelashes and a smug grin, wearing a sparkly pink designer school blazer and shiny white sneakers.",
+        "voice": "posh_woman"
+      },
+      {
+        "id": "mrcoconut",
+        "name": "Mr Coconut",
+        "look": "A big round coconut man with a bushy brown shell head, thick mustache and narrowed eyes, wearing a gold-buttoned navy suit and a gold watch.",
+        "voice": "deep_man"
+      },
+      {
+        "id": "bonnie",
+        "name": "Nurse Banana Bonnie",
+        "look": "A curvy yellow banana woman with warm kind eyes and a brown-tipped top, wearing a mint green nurse uniform and a little white nurse cap.",
+        "voice": "old_woman"
+      }
+    ],
+    "so_far": [
+      "Part 1: Coconut Courtney trips Lychee Lily at the school race and her dad banishes Lily to a hospital storage room, but Nurse Bonnie notices Lily's bracelet bears the same crest as the hospital itself."
+    ],
+    "cliffhanger": "Nurse Bonnie digs into the mystery crest while Courtney plots to get Lily kicked out of the hospital and the school for good.",
+    "narrator": 2
+  },
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -128,10 +164,13 @@
     {
       "title": "Her Tiny Secret Exposed the Greedy Headmaster (Part 4)",
       "premise": "The Heart Coin Classroom (part 4): Chloe reveals she painted hearts on every coin in Duke's safe, the glitter on his suit and the coins spilling from his pockets expose him, and Duke is fired to scrub desks while Miss Bea becomes headmistress."
+    },
+    {
+      "title": "She Tripped the Quiet Girl and Laughed (Part 1)",
+      "premise": "The Silent Heiress (part 1): Coconut Courtney trips Lychee Lily at the school race and her dad banishes Lily to a hospital storage room, but Nurse Bonnie notices Lily's bracelet bears the same crest as the hospital itself."
     }
   ],
   "done_slots": [
-    "2026-10-28 13:00",
     "2026-10-28 19:00",
     "2026-10-29 08:00",
     "2026-10-29 13:00",
@@ -150,6 +189,7 @@
     "2026-11-02 19:00",
     "2026-11-03 08:00",
     "2026-11-03 13:00",
-    "2026-11-03 19:00"
+    "2026-11-03 19:00",
+    "2026-11-04 08:00"
   ]
 }
