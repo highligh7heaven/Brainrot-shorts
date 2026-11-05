@@ -1,43 +1,5 @@
 {
-  "series": {
-    "id": "20261104_1502",
-    "part": 3,
-    "total": 4,
-    "title": "The Silent Heiress",
-    "characters": [
-      {
-        "id": "lily",
-        "name": "Lychee Lily",
-        "look": "A small lychee girl with a bumpy pinkish-red head, big shy brown eyes and a soft smile, wearing a faded blue school tracksuit and a thin old silver bracelet.",
-        "voice": "girl"
-      },
-      {
-        "id": "courtney",
-        "name": "Coconut Courtney",
-        "look": "A tall coconut girl with a glossy brown hairy shell head, sharp eyelashes and a smug grin, wearing a sparkly pink designer school blazer and shiny white sneakers.",
-        "voice": "posh_woman"
-      },
-      {
-        "id": "mrcoconut",
-        "name": "Mr Coconut",
-        "look": "A big round coconut man with a bushy brown shell head, thick mustache and narrowed eyes, wearing a gold-buttoned navy suit and a gold watch.",
-        "voice": "deep_man"
-      },
-      {
-        "id": "bonnie",
-        "name": "Nurse Banana Bonnie",
-        "look": "A curvy yellow banana woman with warm kind eyes and a brown-tipped top, wearing a mint green nurse uniform and a little white nurse cap.",
-        "voice": "old_woman"
-      }
-    ],
-    "so_far": [
-      "Part 1: Coconut Courtney trips Lychee Lily at the school race and her dad banishes Lily to a hospital storage room, but Nurse Bonnie notices Lily's bracelet bears the same crest as the hospital itself.",
-      "Part 2: Nurse Bonnie discovers Lily's bracelet matches the hospital founder's, but Courtney steals it and frames Lily as a thief, and Mr Coconut turns pale when he sees the founder's portrait.",
-      "Part 3: Nurse Bonnie finds the founder's hidden letter leaving the hospital to her granddaughter Lily, but Courtney exposes her and Mr Coconut seizes the letter and holds it over a shredder."
-    ],
-    "cliffhanger": "Can Lily and Bonnie stop Mr Coconut from shredding the letter and finally prove Lily is the true heiress?",
-    "narrator": 2
-  },
+  "series": null,
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -178,10 +140,13 @@
     {
       "title": "The Letter He Hid Behind Her Grandma's Portrait (Part 3)",
       "premise": "The Silent Heiress (part 3): Nurse Bonnie finds the founder's hidden letter leaving the hospital to her granddaughter Lily, but Courtney exposes her and Mr Coconut seizes the letter and holds it over a shredder."
+    },
+    {
+      "title": "He Shredded Her Proof But Forgot One Secret (Part 4)",
+      "premise": "The Silent Heiress (part 4): Mr Coconut shreds the letter, but Lily uses her bracelet to open a hidden drawer in the founder's portrait holding the original will, the board names her heiress, Bonnie becomes head nurse, and the Coconuts end up mopping the storage room."
     }
   ],
   "done_slots": [
-    "2026-10-29 13:00",
     "2026-10-29 19:00",
     "2026-10-30 08:00",
     "2026-10-30 13:00",
@@ -200,6 +165,7 @@
     "2026-11-03 19:00",
     "2026-11-04 08:00",
     "2026-11-04 13:00",
-    "2026-11-04 19:00"
+    "2026-11-04 19:00",
+    "2026-11-05 08:00"
   ]
 }
