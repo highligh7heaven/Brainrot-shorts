@@ -1,7 +1,7 @@
 {
   "series": {
     "id": "20261104_1502",
-    "part": 2,
+    "part": 3,
     "total": 4,
     "title": "The Silent Heiress",
     "characters": [
@@ -32,9 +32,10 @@
     ],
     "so_far": [
       "Part 1: Coconut Courtney trips Lychee Lily at the school race and her dad banishes Lily to a hospital storage room, but Nurse Bonnie notices Lily's bracelet bears the same crest as the hospital itself.",
-      "Part 2: Nurse Bonnie discovers Lily's bracelet matches the hospital founder's, but Courtney steals it and frames Lily as a thief, and Mr Coconut turns pale when he sees the founder's portrait."
+      "Part 2: Nurse Bonnie discovers Lily's bracelet matches the hospital founder's, but Courtney steals it and frames Lily as a thief, and Mr Coconut turns pale when he sees the founder's portrait.",
+      "Part 3: Nurse Bonnie finds the founder's hidden letter leaving the hospital to her granddaughter Lily, but Courtney exposes her and Mr Coconut seizes the letter and holds it over a shredder."
     ],
-    "cliffhanger": "Mr Coconut's dark secret about Lily's family is about to surface as he tries to throw her out before anyone else learns the truth.",
+    "cliffhanger": "Can Lily and Bonnie stop Mr Coconut from shredding the letter and finally prove Lily is the true heiress?",
     "narrator": 2
   },
   "history": [
@@ -173,10 +174,13 @@
     {
       "title": "The Bracelet That Could Change Everything (Part 2)",
       "premise": "The Silent Heiress (part 2): Nurse Bonnie discovers Lily's bracelet matches the hospital founder's, but Courtney steals it and frames Lily as a thief, and Mr Coconut turns pale when he sees the founder's portrait."
+    },
+    {
+      "title": "The Letter He Hid Behind Her Grandma's Portrait (Part 3)",
+      "premise": "The Silent Heiress (part 3): Nurse Bonnie finds the founder's hidden letter leaving the hospital to her granddaughter Lily, but Courtney exposes her and Mr Coconut seizes the letter and holds it over a shredder."
     }
   ],
   "done_slots": [
-    "2026-10-29 08:00",
     "2026-10-29 13:00",
     "2026-10-29 19:00",
     "2026-10-30 08:00",
@@ -195,6 +199,7 @@
     "2026-11-03 13:00",
     "2026-11-03 19:00",
     "2026-11-04 08:00",
-    "2026-11-04 13:00"
+    "2026-11-04 13:00",
+    "2026-11-04 19:00"
   ]
 }
