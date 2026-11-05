@@ -1,5 +1,35 @@
 {
-  "series": null,
+  "series": {
+    "id": "20261105_2003",
+    "part": 1,
+    "total": 3,
+    "title": "The First Class Liar",
+    "characters": [
+      {
+        "id": "tiffany",
+        "name": "Tangerine Tiffany",
+        "look": "A glossy orange tangerine woman with a leafy green bun, big sunglasses, red lipstick, a white tennis skirt, a pink fur coat and gold heels.",
+        "voice": "posh_woman"
+      },
+      {
+        "id": "paulo",
+        "name": "Plum Paulo",
+        "look": "A shy deep purple plum young man with a small stem on his head, kind brown eyes, a navy baggage handler jumpsuit, an orange safety vest and worn gloves.",
+        "voice": "man"
+      },
+      {
+        "id": "mabel",
+        "name": "Melon Mabel",
+        "look": "A round pale green honeydew melon woman with a neat airline cap, cat-eye glasses, a teal gate agent uniform and a silk scarf.",
+        "voice": "woman"
+      }
+    ],
+    "so_far": [
+      "Part 1: Tangerine Tiffany fakes being a tennis champion for a first class upgrade, frames baggage handler Plum Paulo when her trick shot fails, and gets him fired just before his bag reveals a golden trophy with his face on it."
+    ],
+    "cliffhanger": "Mabel discovers the secret of Paulo's golden trophy while Tiffany's lie grows even bigger at thirty thousand feet.",
+    "narrator": 0
+  },
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -144,10 +174,13 @@
     {
       "title": "He Shredded Her Proof But Forgot One Secret (Part 4)",
       "premise": "The Silent Heiress (part 4): Mr Coconut shreds the letter, but Lily uses her bracelet to open a hidden drawer in the founder's portrait holding the original will, the board names her heiress, Bonnie becomes head nurse, and the Coconuts end up mopping the storage room."
+    },
+    {
+      "title": "She Faked Being a Champion to Steal a Seat (Part 1)",
+      "premise": "The First Class Liar (part 1): Tangerine Tiffany fakes being a tennis champion for a first class upgrade, frames baggage handler Plum Paulo when her trick shot fails, and gets him fired just before his bag reveals a golden trophy with his face on it."
     }
   ],
   "done_slots": [
-    "2026-10-29 19:00",
     "2026-10-30 08:00",
     "2026-10-30 13:00",
     "2026-10-30 19:00",
@@ -166,6 +199,7 @@
     "2026-11-04 08:00",
     "2026-11-04 13:00",
     "2026-11-04 19:00",
-    "2026-11-05 08:00"
+    "2026-11-05 08:00",
+    "2026-11-05 13:00"
   ]
 }
