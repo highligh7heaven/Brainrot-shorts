@@ -1,36 +1,5 @@
 {
-  "series": {
-    "id": "20261105_2003",
-    "part": 2,
-    "total": 3,
-    "title": "The First Class Liar",
-    "characters": [
-      {
-        "id": "tiffany",
-        "name": "Tangerine Tiffany",
-        "look": "A glossy orange tangerine woman with a leafy green bun, big sunglasses, red lipstick, a white tennis skirt, a pink fur coat and gold heels.",
-        "voice": "posh_woman"
-      },
-      {
-        "id": "paulo",
-        "name": "Plum Paulo",
-        "look": "A shy deep purple plum young man with a small stem on his head, kind brown eyes, a navy baggage handler jumpsuit, an orange safety vest and worn gloves.",
-        "voice": "man"
-      },
-      {
-        "id": "mabel",
-        "name": "Melon Mabel",
-        "look": "A round pale green honeydew melon woman with a neat airline cap, cat-eye glasses, a teal gate agent uniform and a silk scarf.",
-        "voice": "woman"
-      }
-    ],
-    "so_far": [
-      "Part 1: Tangerine Tiffany fakes being a tennis champion for a first class upgrade, frames baggage handler Plum Paulo when her trick shot fails, and gets him fired just before his bag reveals a golden trophy with his face on it.",
-      "Part 2: Mabel learns Paulo is a former junior world champion, but Tiffany steals his trophy mid-flight, calls him a thief, and hides his lucky racket before their showdown on center court."
-    ],
-    "cliffhanger": "Paulo must face Tiffany in front of a packed stadium with no racket while she claims his golden trophy as her own.",
-    "narrator": 0
-  },
+  "series": null,
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -183,10 +152,13 @@
     {
       "title": "The Baggage Boy Was the Real Champion (Part 2)",
       "premise": "The First Class Liar (part 2): Mabel learns Paulo is a former junior world champion, but Tiffany steals his trophy mid-flight, calls him a thief, and hides his lucky racket before their showdown on center court."
+    },
+    {
+      "title": "She Stole His Trophy, Then Had To Play Him (Part 3)",
+      "premise": "The First Class Liar (part 3): Mabel brings Paulo's lucky racket found in Tiffany's suitcase, he crushes her on center court, the trophy's engraving proves it is his, and Tiffany ends up loading bags while Paulo flies first class."
     }
   ],
   "done_slots": [
-    "2026-10-30 13:00",
     "2026-10-30 19:00",
     "2026-10-31 08:00",
     "2026-10-31 13:00",
@@ -205,6 +177,7 @@
     "2026-11-04 19:00",
     "2026-11-05 08:00",
     "2026-11-05 13:00",
-    "2026-11-05 19:00"
+    "2026-11-05 19:00",
+    "2026-11-06 08:00"
   ]
 }
