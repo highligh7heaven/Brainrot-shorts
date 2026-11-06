@@ -1,5 +1,41 @@
 {
-  "series": null,
+  "series": {
+    "id": "20261106_2057",
+    "part": 1,
+    "total": 3,
+    "title": "The Yellow Umbrella Wedding",
+    "characters": [
+      {
+        "id": "annie",
+        "name": "Apricot Annie",
+        "look": "A soft round apricot head with freckles, big kind brown eyes and a short ponytail, a slim body in a black waitress dress with a white apron.",
+        "voice": "woman"
+      },
+      {
+        "id": "lola",
+        "name": "Lemon Lola",
+        "look": "A shiny bright yellow lemon head with a pointy tip, sharp green eyes and red lipstick, wearing a huge sparkling white wedding gown and a tall diamond tiara.",
+        "voice": "posh_woman"
+      },
+      {
+        "id": "pierre",
+        "name": "Potato Pierre",
+        "look": "A gentle brown potato head with rosy cheeks, round glasses and a shy smile, wearing a neat navy tuxedo with a little white flower pinned on it.",
+        "voice": "man"
+      },
+      {
+        "id": "walnut",
+        "name": "Grandpa Walnut",
+        "look": "A wrinkled brown walnut head with bushy white eyebrows and a long white beard, a small hunched body in a worn gray coat and old brown shoes.",
+        "voice": "old_man"
+      }
+    ],
+    "so_far": [
+      "Part 1: Apricot Annie gives her umbrella to a shivering old walnut, then Lemon Lola falls into her own wedding cake, blames Annie and gets her thrown out, just as the walnut arrives revealed as Pierre's grandpa."
+    ],
+    "cliffhanger": "Grandpa Walnut demands to know who threw out the waitress who saved him from the storm, and Lola scrambles to keep her lie alive.",
+    "narrator": 0
+  },
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -156,10 +192,13 @@
     {
       "title": "She Stole His Trophy, Then Had To Play Him (Part 3)",
       "premise": "The First Class Liar (part 3): Mabel brings Paulo's lucky racket found in Tiffany's suitcase, he crushes her on center court, the trophy's engraving proves it is his, and Tiffany ends up loading bags while Paulo flies first class."
+    },
+    {
+      "title": "She Gave a Stranger Her Umbrella, Then Lost Everything (Part 1)",
+      "premise": "The Yellow Umbrella Wedding (part 1): Apricot Annie gives her umbrella to a shivering old walnut, then Lemon Lola falls into her own wedding cake, blames Annie and gets her thrown out, just as the walnut arrives revealed as Pierre's grandpa."
     }
   ],
   "done_slots": [
-    "2026-10-30 19:00",
     "2026-10-31 08:00",
     "2026-10-31 13:00",
     "2026-10-31 19:00",
@@ -178,6 +217,7 @@
     "2026-11-05 08:00",
     "2026-11-05 13:00",
     "2026-11-05 19:00",
-    "2026-11-06 08:00"
+    "2026-11-06 08:00",
+    "2026-11-06 13:00"
   ]
 }
