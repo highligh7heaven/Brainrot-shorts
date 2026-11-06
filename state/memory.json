@@ -1,7 +1,7 @@
 {
   "series": {
     "id": "20261105_2003",
-    "part": 1,
+    "part": 2,
     "total": 3,
     "title": "The First Class Liar",
     "characters": [
@@ -25,9 +25,10 @@
       }
     ],
     "so_far": [
-      "Part 1: Tangerine Tiffany fakes being a tennis champion for a first class upgrade, frames baggage handler Plum Paulo when her trick shot fails, and gets him fired just before his bag reveals a golden trophy with his face on it."
+      "Part 1: Tangerine Tiffany fakes being a tennis champion for a first class upgrade, frames baggage handler Plum Paulo when her trick shot fails, and gets him fired just before his bag reveals a golden trophy with his face on it.",
+      "Part 2: Mabel learns Paulo is a former junior world champion, but Tiffany steals his trophy mid-flight, calls him a thief, and hides his lucky racket before their showdown on center court."
     ],
-    "cliffhanger": "Mabel discovers the secret of Paulo's golden trophy while Tiffany's lie grows even bigger at thirty thousand feet.",
+    "cliffhanger": "Paulo must face Tiffany in front of a packed stadium with no racket while she claims his golden trophy as her own.",
     "narrator": 0
   },
   "history": [
@@ -178,10 +179,13 @@
     {
       "title": "She Faked Being a Champion to Steal a Seat (Part 1)",
       "premise": "The First Class Liar (part 1): Tangerine Tiffany fakes being a tennis champion for a first class upgrade, frames baggage handler Plum Paulo when her trick shot fails, and gets him fired just before his bag reveals a golden trophy with his face on it."
+    },
+    {
+      "title": "The Baggage Boy Was the Real Champion (Part 2)",
+      "premise": "The First Class Liar (part 2): Mabel learns Paulo is a former junior world champion, but Tiffany steals his trophy mid-flight, calls him a thief, and hides his lucky racket before their showdown on center court."
     }
   ],
   "done_slots": [
-    "2026-10-30 08:00",
     "2026-10-30 13:00",
     "2026-10-30 19:00",
     "2026-10-31 08:00",
@@ -200,6 +204,7 @@
     "2026-11-04 13:00",
     "2026-11-04 19:00",
     "2026-11-05 08:00",
-    "2026-11-05 13:00"
+    "2026-11-05 13:00",
+    "2026-11-05 19:00"
   ]
 }
