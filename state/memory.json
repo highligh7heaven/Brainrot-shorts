@@ -1,7 +1,7 @@
 {
   "series": {
     "id": "20261106_2057",
-    "part": 1,
+    "part": 2,
     "total": 3,
     "title": "The Yellow Umbrella Wedding",
     "characters": [
@@ -31,9 +31,10 @@
       }
     ],
     "so_far": [
-      "Part 1: Apricot Annie gives her umbrella to a shivering old walnut, then Lemon Lola falls into her own wedding cake, blames Annie and gets her thrown out, just as the walnut arrives revealed as Pierre's grandpa."
+      "Part 1: Apricot Annie gives her umbrella to a shivering old walnut, then Lemon Lola falls into her own wedding cake, blames Annie and gets her thrown out, just as the walnut arrives revealed as Pierre's grandpa.",
+      "Part 2: Lola claims she was the one who gave Grandpa Walnut the umbrella and fakes freckles and an apricot scent to fool him, while Pierre finds Annie soaked at the bus stop and learns the truth."
     ],
-    "cliffhanger": "Grandpa Walnut demands to know who threw out the waitress who saved him from the storm, and Lola scrambles to keep her lie alive.",
+    "cliffhanger": "Pierre brings Annie back to the wedding, but Lola has locked the doors just as Grandpa is about to give her the golden family ring.",
     "narrator": 0
   },
   "history": [
@@ -196,10 +197,13 @@
     {
       "title": "She Gave a Stranger Her Umbrella, Then Lost Everything (Part 1)",
       "premise": "The Yellow Umbrella Wedding (part 1): Apricot Annie gives her umbrella to a shivering old walnut, then Lemon Lola falls into her own wedding cake, blames Annie and gets her thrown out, just as the walnut arrives revealed as Pierre's grandpa."
+    },
+    {
+      "title": "The Bride Stole the Credit for a Stranger's Kindness (Part 2)",
+      "premise": "The Yellow Umbrella Wedding (part 2): Lola claims she was the one who gave Grandpa Walnut the umbrella and fakes freckles and an apricot scent to fool him, while Pierre finds Annie soaked at the bus stop and learns the truth."
     }
   ],
   "done_slots": [
-    "2026-10-31 08:00",
     "2026-10-31 13:00",
     "2026-10-31 19:00",
     "2026-11-01 08:00",
@@ -218,6 +222,7 @@
     "2026-11-05 13:00",
     "2026-11-05 19:00",
     "2026-11-06 08:00",
-    "2026-11-06 13:00"
+    "2026-11-06 13:00",
+    "2026-11-06 19:00"
   ]
 }
