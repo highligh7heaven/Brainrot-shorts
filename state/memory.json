@@ -1,5 +1,41 @@
 {
-  "series": null,
+  "series": {
+    "id": "20261107_2050",
+    "part": 1,
+    "total": 3,
+    "title": "The Crybaby Onion",
+    "characters": [
+      {
+        "id": "olive",
+        "name": "Olive Onion",
+        "look": "A glowing golden onion woman with shiny layered skin, big gentle brown eyes, a sleek green sprout ponytail, wearing an elegant cream silk suit and pearl earrings.",
+        "voice": "woman"
+      },
+      {
+        "id": "priscilla",
+        "name": "Pineapple Priscilla",
+        "look": "A tall pineapple woman with spiky green crown hair, sharp pink lipstick and narrow smug eyes, wearing a sparkly gold dress and a large golden medal around her neck.",
+        "voice": "posh_woman"
+      },
+      {
+        "id": "judge",
+        "name": "Judge Walnut",
+        "look": "An old wrinkled walnut man with bushy white eyebrows and round spectacles, wearing a long black judge robe and holding a wooden gavel.",
+        "voice": "old_man"
+      },
+      {
+        "id": "gracie",
+        "name": "Grape Gracie",
+        "look": "A tiny round purple grape girl with huge sparkling eyes, two little leaf pigtails, wearing a yellow raincoat and red rain boots.",
+        "voice": "girl"
+      }
+    ],
+    "so_far": [
+      "Part 1: Years after being bullied, glowed-up Olive Onion is accused in court by Pineapple Priscilla of starting the market fire, but little Grape Gracie reveals Olive saved her, until Priscilla produces a photo of Olive holding a match."
+    ],
+    "cliffhanger": "Olive must explain the mysterious match photo while the scorched scarf in her bag holds the secret of what really happened at the fire.",
+    "narrator": 5
+  },
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -168,10 +204,13 @@
     {
       "title": "The Umbrella Question Only the Real Hero Could Answer (Part 3)",
       "premise": "The Yellow Umbrella Wedding (part 3): Annie sneaks in through the kitchen, answers Grandpa's umbrella question that Lola can't, the umbrella's rainwater washes off Lola's fake freckles, and Annie gets the golden ring and Pierre while Lola ends up serving cake."
+    },
+    {
+      "title": "The Girl They Called Crybaby Walked Into Court (Part 1)",
+      "premise": "The Crybaby Onion (part 1): Years after being bullied, glowed-up Olive Onion is accused in court by Pineapple Priscilla of starting the market fire, but little Grape Gracie reveals Olive saved her, until Priscilla produces a photo of Olive holding a match."
     }
   ],
   "done_slots": [
-    "2026-10-31 19:00",
     "2026-11-01 08:00",
     "2026-11-01 13:00",
     "2026-11-01 19:00",
@@ -190,6 +229,7 @@
     "2026-11-06 08:00",
     "2026-11-06 13:00",
     "2026-11-06 19:00",
-    "2026-11-07 08:00"
+    "2026-11-07 08:00",
+    "2026-11-07 13:00"
   ]
 }
