@@ -1,5 +1,35 @@
 {
-  "series": null,
+  "series": {
+    "id": "20261108_2050",
+    "part": 1,
+    "total": 3,
+    "title": "The Gate Nine Cleaner",
+    "characters": [
+      {
+        "id": "carla",
+        "name": "Carrot Carla",
+        "look": "A slim orange carrot woman with a leafy green ponytail, big hopeful brown eyes, wearing a faded blue cleaner's jumpsuit under an old red jacket with gold buttons.",
+        "voice": "woman"
+      },
+      {
+        "id": "prescott",
+        "name": "Pomelo Prescott",
+        "look": "A round pale-yellow pomelo man with a smug grin, slicked green leaf hair, thick eyebrows, wearing a shiny gold suit and a fat gold watch.",
+        "voice": "deep_man"
+      },
+      {
+        "id": "diana",
+        "name": "Dragonfruit Diana",
+        "look": "An elegant pink dragonfruit woman with green-tipped spiky leaves styled like a crown, kind teary green eyes, wearing a white fur coat and pearl earrings.",
+        "voice": "posh_woman"
+      }
+    ],
+    "so_far": [
+      "Part 1: Pomelo Prescott forces cleaner Carrot Carla to mop his spilled coffee with her mother's jacket and fires her, but the billionaire buying the airport, Dragonfruit Diana, recognizes the jacket and reveals she is Carla's long-lost mother."
+    ],
+    "cliffhanger": "Next, Prescott panics and schemes to prove Carla is a fake daughter before Diana signs the airport over.",
+    "narrator": 6
+  },
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -180,10 +210,13 @@
     {
       "title": "The Burnt Ribbon That Exposed Her Biggest Lie (Part 3)",
       "premise": "The Crybaby Onion (part 3): Olive matches Priscilla's singed medal ribbon to the scorched scarf, Gracie confesses she was forced to lie, and Priscilla loses her medal and ends up sweeping the rebuilt market Olive now runs."
+    },
+    {
+      "title": "He Made Her Mop Coffee With Her Mother's Jacket (Part 1)",
+      "premise": "The Gate Nine Cleaner (part 1): Pomelo Prescott forces cleaner Carrot Carla to mop his spilled coffee with her mother's jacket and fires her, but the billionaire buying the airport, Dragonfruit Diana, recognizes the jacket and reveals she is Carla's long-lost mother."
     }
   ],
   "done_slots": [
-    "2026-11-01 19:00",
     "2026-11-02 08:00",
     "2026-11-02 13:00",
     "2026-11-02 19:00",
@@ -202,6 +235,7 @@
     "2026-11-07 08:00",
     "2026-11-07 13:00",
     "2026-11-07 19:00",
-    "2026-11-08 08:00"
+    "2026-11-08 08:00",
+    "2026-11-08 13:00"
   ]
 }
