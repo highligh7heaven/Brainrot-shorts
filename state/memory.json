@@ -1,7 +1,7 @@
 {
   "series": {
     "id": "20261107_2050",
-    "part": 1,
+    "part": 2,
     "total": 3,
     "title": "The Crybaby Onion",
     "characters": [
@@ -31,9 +31,10 @@
       }
     ],
     "so_far": [
-      "Part 1: Years after being bullied, glowed-up Olive Onion is accused in court by Pineapple Priscilla of starting the market fire, but little Grape Gracie reveals Olive saved her, until Priscilla produces a photo of Olive holding a match."
+      "Part 1: Years after being bullied, glowed-up Olive Onion is accused in court by Pineapple Priscilla of starting the market fire, but little Grape Gracie reveals Olive saved her, until Priscilla produces a photo of Olive holding a match.",
+      "Part 2: Olive explains the match and reveals Priscilla's scorched golden scarf from where the fire started, but Priscilla threatens Gracie into telling the court she lied."
     ],
-    "cliffhanger": "Olive must explain the mysterious match photo while the scorched scarf in her bag holds the secret of what really happened at the fire.",
+    "cliffhanger": "With her only witness turned against her, Olive must find a way to prove the scarf's truth before the judge's final verdict.",
     "narrator": 5
   },
   "history": [
@@ -208,10 +209,13 @@
     {
       "title": "The Girl They Called Crybaby Walked Into Court (Part 1)",
       "premise": "The Crybaby Onion (part 1): Years after being bullied, glowed-up Olive Onion is accused in court by Pineapple Priscilla of starting the market fire, but little Grape Gracie reveals Olive saved her, until Priscilla produces a photo of Olive holding a match."
+    },
+    {
+      "title": "She Lit the Match but Hid a Burning Secret (Part 2)",
+      "premise": "The Crybaby Onion (part 2): Olive explains the match and reveals Priscilla's scorched golden scarf from where the fire started, but Priscilla threatens Gracie into telling the court she lied."
     }
   ],
   "done_slots": [
-    "2026-11-01 08:00",
     "2026-11-01 13:00",
     "2026-11-01 19:00",
     "2026-11-02 08:00",
@@ -230,6 +234,7 @@
     "2026-11-06 13:00",
     "2026-11-06 19:00",
     "2026-11-07 08:00",
-    "2026-11-07 13:00"
+    "2026-11-07 13:00",
+    "2026-11-07 19:00"
   ]
 }
