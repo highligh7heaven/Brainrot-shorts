@@ -1,42 +1,5 @@
 {
-  "series": {
-    "id": "20261107_2050",
-    "part": 2,
-    "total": 3,
-    "title": "The Crybaby Onion",
-    "characters": [
-      {
-        "id": "olive",
-        "name": "Olive Onion",
-        "look": "A glowing golden onion woman with shiny layered skin, big gentle brown eyes, a sleek green sprout ponytail, wearing an elegant cream silk suit and pearl earrings.",
-        "voice": "woman"
-      },
-      {
-        "id": "priscilla",
-        "name": "Pineapple Priscilla",
-        "look": "A tall pineapple woman with spiky green crown hair, sharp pink lipstick and narrow smug eyes, wearing a sparkly gold dress and a large golden medal around her neck.",
-        "voice": "posh_woman"
-      },
-      {
-        "id": "judge",
-        "name": "Judge Walnut",
-        "look": "An old wrinkled walnut man with bushy white eyebrows and round spectacles, wearing a long black judge robe and holding a wooden gavel.",
-        "voice": "old_man"
-      },
-      {
-        "id": "gracie",
-        "name": "Grape Gracie",
-        "look": "A tiny round purple grape girl with huge sparkling eyes, two little leaf pigtails, wearing a yellow raincoat and red rain boots.",
-        "voice": "girl"
-      }
-    ],
-    "so_far": [
-      "Part 1: Years after being bullied, glowed-up Olive Onion is accused in court by Pineapple Priscilla of starting the market fire, but little Grape Gracie reveals Olive saved her, until Priscilla produces a photo of Olive holding a match.",
-      "Part 2: Olive explains the match and reveals Priscilla's scorched golden scarf from where the fire started, but Priscilla threatens Gracie into telling the court she lied."
-    ],
-    "cliffhanger": "With her only witness turned against her, Olive must find a way to prove the scarf's truth before the judge's final verdict.",
-    "narrator": 5
-  },
+  "series": null,
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -213,10 +176,13 @@
     {
       "title": "She Lit the Match but Hid a Burning Secret (Part 2)",
       "premise": "The Crybaby Onion (part 2): Olive explains the match and reveals Priscilla's scorched golden scarf from where the fire started, but Priscilla threatens Gracie into telling the court she lied."
+    },
+    {
+      "title": "The Burnt Ribbon That Exposed Her Biggest Lie (Part 3)",
+      "premise": "The Crybaby Onion (part 3): Olive matches Priscilla's singed medal ribbon to the scorched scarf, Gracie confesses she was forced to lie, and Priscilla loses her medal and ends up sweeping the rebuilt market Olive now runs."
     }
   ],
   "done_slots": [
-    "2026-11-01 13:00",
     "2026-11-01 19:00",
     "2026-11-02 08:00",
     "2026-11-02 13:00",
@@ -235,6 +201,7 @@
     "2026-11-06 19:00",
     "2026-11-07 08:00",
     "2026-11-07 13:00",
-    "2026-11-07 19:00"
+    "2026-11-07 19:00",
+    "2026-11-08 08:00"
   ]
 }
