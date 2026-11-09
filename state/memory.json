@@ -1,7 +1,7 @@
 {
   "series": {
     "id": "20261108_2050",
-    "part": 1,
+    "part": 2,
     "total": 3,
     "title": "The Gate Nine Cleaner",
     "characters": [
@@ -25,9 +25,10 @@
       }
     ],
     "so_far": [
-      "Part 1: Pomelo Prescott forces cleaner Carrot Carla to mop his spilled coffee with her mother's jacket and fires her, but the billionaire buying the airport, Dragonfruit Diana, recognizes the jacket and reveals she is Carla's long-lost mother."
+      "Part 1: Pomelo Prescott forces cleaner Carrot Carla to mop his spilled coffee with her mother's jacket and fires her, but the billionaire buying the airport, Dragonfruit Diana, recognizes the jacket and reveals she is Carla's long-lost mother.",
+      "Part 2: Prescott secretly swaps the heart-sewn button on the red jacket to convince Diana that Carla is a fake, gets Carla thrown out, but Carla finds the real button in his coffee cup just before he snatches it away at the signing."
     ],
-    "cliffhanger": "Next, Prescott panics and schemes to prove Carla is a fake daughter before Diana signs the airport over.",
+    "cliffhanger": "Next, Prescott tries to get rid of the cup and the heart button forever as Diana's pen touches the contract, and Carla must stop him before the airport is his.",
     "narrator": 6
   },
   "history": [
@@ -214,10 +215,13 @@
     {
       "title": "He Made Her Mop Coffee With Her Mother's Jacket (Part 1)",
       "premise": "The Gate Nine Cleaner (part 1): Pomelo Prescott forces cleaner Carrot Carla to mop his spilled coffee with her mother's jacket and fires her, but the billionaire buying the airport, Dragonfruit Diana, recognizes the jacket and reveals she is Carla's long-lost mother."
+    },
+    {
+      "title": "He Stole the One Button That Proved She Was Family (Part 2)",
+      "premise": "The Gate Nine Cleaner (part 2): Prescott secretly swaps the heart-sewn button on the red jacket to convince Diana that Carla is a fake, gets Carla thrown out, but Carla finds the real button in his coffee cup just before he snatches it away at the signing."
     }
   ],
   "done_slots": [
-    "2026-11-02 08:00",
     "2026-11-02 13:00",
     "2026-11-02 19:00",
     "2026-11-03 08:00",
@@ -236,6 +240,7 @@
     "2026-11-07 13:00",
     "2026-11-07 19:00",
     "2026-11-08 08:00",
-    "2026-11-08 13:00"
+    "2026-11-08 13:00",
+    "2026-11-08 19:00"
   ]
 }
