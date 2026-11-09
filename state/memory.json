@@ -1,36 +1,5 @@
 {
-  "series": {
-    "id": "20261108_2050",
-    "part": 2,
-    "total": 3,
-    "title": "The Gate Nine Cleaner",
-    "characters": [
-      {
-        "id": "carla",
-        "name": "Carrot Carla",
-        "look": "A slim orange carrot woman with a leafy green ponytail, big hopeful brown eyes, wearing a faded blue cleaner's jumpsuit under an old red jacket with gold buttons.",
-        "voice": "woman"
-      },
-      {
-        "id": "prescott",
-        "name": "Pomelo Prescott",
-        "look": "A round pale-yellow pomelo man with a smug grin, slicked green leaf hair, thick eyebrows, wearing a shiny gold suit and a fat gold watch.",
-        "voice": "deep_man"
-      },
-      {
-        "id": "diana",
-        "name": "Dragonfruit Diana",
-        "look": "An elegant pink dragonfruit woman with green-tipped spiky leaves styled like a crown, kind teary green eyes, wearing a white fur coat and pearl earrings.",
-        "voice": "posh_woman"
-      }
-    ],
-    "so_far": [
-      "Part 1: Pomelo Prescott forces cleaner Carrot Carla to mop his spilled coffee with her mother's jacket and fires her, but the billionaire buying the airport, Dragonfruit Diana, recognizes the jacket and reveals she is Carla's long-lost mother.",
-      "Part 2: Prescott secretly swaps the heart-sewn button on the red jacket to convince Diana that Carla is a fake, gets Carla thrown out, but Carla finds the real button in his coffee cup just before he snatches it away at the signing."
-    ],
-    "cliffhanger": "Next, Prescott tries to get rid of the cup and the heart button forever as Diana's pen touches the contract, and Carla must stop him before the airport is his.",
-    "narrator": 6
-  },
+  "series": null,
   "history": [
     {
       "title": "His Best Friend Swapped the Plans at Midnight (Part 1)",
@@ -219,10 +188,13 @@
     {
       "title": "He Stole the One Button That Proved She Was Family (Part 2)",
       "premise": "The Gate Nine Cleaner (part 2): Prescott secretly swaps the heart-sewn button on the red jacket to convince Diana that Carla is a fake, gets Carla thrown out, but Carla finds the real button in his coffee cup just before he snatches it away at the signing."
+    },
+    {
+      "title": "He Threw Her Mother's Heart in the Trash (Part 3)",
+      "premise": "The Gate Nine Cleaner (part 3): Carla catches the cup in the baggage hall, proves the heart button is real, Diana tears up the contract, and Prescott slips in his own coffee and ends up mopping Gate Nine while Carla owns the airport."
     }
   ],
   "done_slots": [
-    "2026-11-02 13:00",
     "2026-11-02 19:00",
     "2026-11-03 08:00",
     "2026-11-03 13:00",
@@ -241,6 +213,7 @@
     "2026-11-07 19:00",
     "2026-11-08 08:00",
     "2026-11-08 13:00",
-    "2026-11-08 19:00"
+    "2026-11-08 19:00",
+    "2026-11-09 08:00"
   ]
 }
