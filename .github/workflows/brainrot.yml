@@ -9,8 +9,10 @@ name: Brainrot Shorts
 #   TIMEZONE    e.g. "America/Vancouver"    (default)
 # By hand: GitHub app -> Actions -> Brainrot Shorts -> Run workflow.
 on:
-  schedule:
-    - cron: "17 * * * *"   # every hour at :17; the check below decides
+  # Automatic videos are PAUSED. To switch them back on, put these two lines
+  # back under "on:" (Claude can do it for you):
+  #   schedule:
+  #     - cron: "17 * * * *"   # every hour at :17; the check below decides
   workflow_dispatch:
     inputs:
       idea:
